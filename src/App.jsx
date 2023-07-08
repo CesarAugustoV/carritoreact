@@ -138,7 +138,7 @@ export function App() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
     //Carrito
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const mostrarCarrito = () => {
         setOpen(!open);

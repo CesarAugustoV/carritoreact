@@ -5,3 +5,4 @@ export { ProductList } from './ProductList/ProductList';
 export { TransitionMobile } from './TransitionMobile/TransitionMobile';
 export { Filtros } from './Filtros/Filtros';
 export { Barra } from './Barra/Barra';
+export { Filters } from './Filters/Filters';

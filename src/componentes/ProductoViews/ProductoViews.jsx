@@ -3,43 +3,20 @@ import { Dialog, RadioGroup, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/20/solid'
 
-const product = {
-    name: 'Basic Tee 6-Pack ',
-    price: '$192',
-    rating: 3.9,
-    reviewCount: 117,
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
-    imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
-    colors: [
-        { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-        { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-        { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-    ],
-    sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ],
-}
-
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function ProductoViews() {
-    const [open, setOpen] = useState(false)
-    const [selectedColor, setSelectedColor] = useState(product.colors[0])
-    const [selectedSize, setSelectedSize] = useState(product.sizes[2])
-
+export function ProductoViews({openView, setOpenView, productoSeleccionado}) {
+    if(!productoSeleccionado){
+        return
+    }
+    const [selectedColor, setSelectedColor] = useState(productoSeleccionado.colors[0])
+    const [selectedSize, setSelectedSize] = useState(productoSeleccionado.sizes[2])
+    
     return (
-        <Transition.Root show={open} as={Fragment}>
-            <Dialog as="div" className="relative z-10" onClose={setOpen}>
+        <Transition.Root show={openView} as={Fragment}>
+            <Dialog as="div" className="relative z-10" onClose={setOpenView}>
                 <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"
@@ -68,7 +45,7 @@ export function ProductoViews() {
                                     <button
                                         type="button"
                                         className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
-                                        onClick={() => setOpen(false)}
+                                        onClick={() => setOpenView(false)}
                                     >
                                         <span className="sr-only">Close</span>
                                         <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -76,17 +53,17 @@ export function ProductoViews() {
 
                                     <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8">
                                         <div className="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
-                                            <img src={product.imageSrc} alt={product.imageAlt} className="object-cover object-center" />
+                                            <img src={productoSeleccionado.imageSrc} alt={productoSeleccionado.imageAlt} className="object-cover object-center" />
                                         </div>
                                         <div className="sm:col-span-8 lg:col-span-7">
-                                            <h2 className="text-2xl font-bold text-gray-900 sm:pr-12">{product.name}</h2>
+                                            <h2 className="text-2xl font-bold text-gray-900 sm:pr-12">{productoSeleccionado.name}</h2>
 
                                             <section aria-labelledby="information-heading" className="mt-2">
                                                 <h3 id="information-heading" className="sr-only">
-                                                    Product information
+                                                    productoSeleccionado information
                                                 </h3>
 
-                                                <p className="text-2xl text-gray-900">{product.price}</p>
+                                                <p className="text-2xl text-gray-900">{productoSeleccionado.price}</p>
 
                                                 {/* Reviews */}
                                                 <div className="mt-6">
@@ -97,16 +74,16 @@ export function ProductoViews() {
                                                                 <StarIcon
                                                                     key={rating}
                                                                     className={classNames(
-                                                                        product.rating > rating ? 'text-gray-900' : 'text-gray-200',
+                                                                        productoSeleccionado.rating > rating ? 'text-gray-900' : 'text-gray-200',
                                                                         'h-5 w-5 flex-shrink-0'
                                                                     )}
                                                                     aria-hidden="true"
                                                                 />
                                                             ))}
                                                         </div>
-                                                        <p className="sr-only">{product.rating} out of 5 stars</p>
+                                                        <p className="sr-only">{productoSeleccionado.rating} out of 5 stars</p>
                                                         <a href="#" className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                                                            {product.reviewCount} reviews
+                                                            {productoSeleccionado.reviewCount} reviews
                                                         </a>
                                                     </div>
                                                 </div>
@@ -114,7 +91,7 @@ export function ProductoViews() {
 
                                             <section aria-labelledby="options-heading" className="mt-10">
                                                 <h3 id="options-heading" className="sr-only">
-                                                    Product options
+                                                    productoSeleccionado options
                                                 </h3>
 
                                                 <form>
@@ -125,7 +102,7 @@ export function ProductoViews() {
                                                         <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
                                                             <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
                                                             <span className="flex items-center space-x-3">
-                                                                {product.colors.map((color) => (
+                                                                {productoSeleccionado.colors.map((color) => (
                                                                     <RadioGroup.Option
                                                                         key={color.name}
                                                                         value={color}
@@ -166,7 +143,7 @@ export function ProductoViews() {
                                                         <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
                                                             <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
                                                             <div className="grid grid-cols-4 gap-4">
-                                                                {product.sizes.map((size) => (
+                                                                {productoSeleccionado.sizes.map((size) => (
                                                                     <RadioGroup.Option
                                                                         key={size.name}
                                                                         value={size}

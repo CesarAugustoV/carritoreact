@@ -1,4 +1,8 @@
-export function ProductList({products}) {
+export function ProductList({products, mostrarProducto}) {
+    const devolverProducto = (id) => {
+        mostrarProducto(id)
+    }
+
     return (
                 <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                     {products.map((product) => (
@@ -13,10 +17,10 @@ export function ProductList({products}) {
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-sm text-gray-700">
-                                        <a href={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
+                                        <button href={product.href}>
+                                            <span aria-hidden="true" className="absolute inset-0" onClick={()=> devolverProducto(product.id)}/>
                                             {product.name}
-                                        </a>
+                                        </button>
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                                 </div>

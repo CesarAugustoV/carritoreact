@@ -3,9 +3,10 @@ import './App.css'
 import { useState } from 'react';
 import {
     NavBar, ProductoViews,
-    ProductList, TransitionMobile, 
-    Filtros, ShoppingCart, Barra
+    ProductList, TransitionMobile,
+    Filtros, ShoppingCart, Barra, Filters
 } from './componentes';
+import { useEffect } from 'react';
 
 
 const filters = [
@@ -63,6 +64,21 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$25',
         color: 'Negro',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     },
     {
         id: 2,
@@ -72,6 +88,21 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '35',
         color: 'Blanca',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     },
     {
         id: 3,
@@ -81,6 +112,21 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$20',
         color: 'Gris',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     },
     {
         id: 4,
@@ -90,6 +136,21 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$40',
         color: 'Multicolor',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     },
     {
         id: 5,
@@ -99,6 +160,21 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$40',
         color: 'Azul',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     },
     {
         id: 6,
@@ -108,6 +184,21 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$43',
         color: 'Gris',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     },
     {
         id: 7,
@@ -117,6 +208,21 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$30',
         color: 'Salmon',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     },
     {
         id: 8,
@@ -126,28 +232,73 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$50',
         color: 'Amarillo',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
+    },
+    {
+        id: 9,
+        name: 'Camisetas basicas 6-pack',
+        href: '#',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: '$120',
+        color: 'Multicolor',
+        colors: [
+            { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+            { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+            { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
+        ],
+        sizes: [
+        { name: 'XXS', inStock: true },
+        { name: 'XS', inStock: true },
+        { name: 'S', inStock: true },
+        { name: 'M', inStock: true },
+        { name: 'L', inStock: true },
+        { name: 'XL', inStock: true },
+        { name: 'XXL', inStock: true },
+        { name: 'XXXL', inStock: false },
+    ]
     }
     // More products...
 ]
 
 
 export function App() {
+
     //filtros
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-    //Carrito
-    const [open, setOpen] = useState(false);
-
-    const mostrarCarrito = () => {
-        setOpen(!open);
-    }
+    //Mostrar Carrito
+    const [openCart, setOpenCart] = useState(false);
+    const mostrarCarrito = () => setOpenCart(!openCart);
+    //Producto Seleccionado
+    const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+    //Mostrar producto
+    const [openView, setOpenView] = useState(false);
+    const mostrarProducto = (id) => {
+        setOpenView(!openView)
+        setProductoSeleccionado(products.find((p)=> p.id === id))
+    };
 
     return (
         <>
             {/* navbar */}
             <NavBar mostrarCarrito={mostrarCarrito} />
             {/* Carrito de compras */}
-            <ShoppingCart open={open} setOpen={setOpen} />
+            <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} />
             {/* Seccion Principal */}
             <div className='bg-white'>
                 <div>
@@ -167,14 +318,15 @@ export function App() {
                                 <Filtros filters={filters} subCategories={subCategories} mobileFiltersOpen={mobileFiltersOpen} setMobileFiltersOpen={setMobileFiltersOpen} />
                                 {/* lista de productos */}
                                 <div className="lg:col-span-3">
-                                    <ProductList products={products} />
+                                    <ProductList products={products} mostrarProducto={mostrarProducto} />
                                 </div>
                             </div>
                         </section>
                     </main>
                 </div>
             </div>
-            <ProductoViews />
+            {/* ver producto */}
+            <ProductoViews openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado}/>
         </>
 
     );

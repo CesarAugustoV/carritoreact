@@ -3,7 +3,7 @@ import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import {MinusIcon, PlusIcon} from '@heroicons/react/20/solid'
 
-export default function Filtros({filters, subCategories}) {
+export function Filtros({filters, subCategories}) {
     return (
             <form className="hidden lg:block">
                 <h3 className="sr-only">Categories</h3>

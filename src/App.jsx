@@ -1,13 +1,11 @@
 import React from 'react'
 import './App.css'
-import { ShoppingCart } from './componentes'
 import { useState } from 'react';
-import Filtros from './componentes/Filtros/Filtros';
-import Barra from './componentes/Barra/Barra';
-import TransitionMobile from './componentes/Filtros/TransitionMobile';
-import ProductList from './componentes/ProductList/ProductList';
-import ProductoViews from './componentes/productoViews/productoViews';
-import { NavBar } from './componentes';
+import {
+    NavBar, ProductoViews,
+    ProductList, TransitionMobile, 
+    Filtros, ShoppingCart, Barra
+} from './componentes';
 
 
 const filters = [
@@ -147,7 +145,7 @@ export function App() {
     return (
         <>
             {/* navbar */}
-            <NavBar mostrarCarrito={mostrarCarrito}/>
+            <NavBar mostrarCarrito={mostrarCarrito} />
             {/* Carrito de compras */}
             <ShoppingCart open={open} setOpen={setOpen} />
             {/* Seccion Principal */}

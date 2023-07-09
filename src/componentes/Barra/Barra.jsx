@@ -15,7 +15,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Barra({setMobileFiltersOpen}) {
+export function Barra({setMobileFiltersOpen}) {
 
     return (
         <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">

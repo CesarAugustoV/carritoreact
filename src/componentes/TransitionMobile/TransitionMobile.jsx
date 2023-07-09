@@ -3,7 +3,7 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 
-export default function TransitionMobile({filters, subCategories, mobileFiltersOpen
+export function TransitionMobile({filters, subCategories, mobileFiltersOpen
     ,setMobileFiltersOpen}) {
     
     return (

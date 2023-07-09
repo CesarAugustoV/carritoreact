@@ -1,6 +1,4 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, Transition } from '@headlessui/react'
 import {MinusIcon, PlusIcon} from '@heroicons/react/20/solid'
 
 export function Filtros({filters, subCategories}) {

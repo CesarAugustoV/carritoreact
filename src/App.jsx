@@ -327,6 +327,7 @@ export function App() {
             </div>
             {/* ver producto */}
             <ProductoViews openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado}/>
+            <Filters />
         </>
 
     );

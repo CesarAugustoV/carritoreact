@@ -6,7 +6,6 @@ import {
     ProductList, TransitionMobile,
     Filtros, ShoppingCart, Barra, Filters
 } from './componentes';
-import { useEffect } from 'react';
 
 
 const filters = [
@@ -327,7 +326,6 @@ export function App() {
             </div>
             {/* ver producto */}
             <ProductoViews openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado}/>
-            <Filters />
         </>
 
     );

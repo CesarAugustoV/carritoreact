@@ -306,7 +306,6 @@ export function App() {
                     <TransitionMobile filters={filters} subCategories={subCategories} mobileFiltersOpen={mobileFiltersOpen} setMobileFiltersOpen={setMobileFiltersOpen} />
                     {/* display */}
                     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                        <h1> Hola soy Cesar</h1>
                         {/* Barra titulo */}
                         <Barra setMobileFiltersOpen={setMobileFiltersOpen} />
                         {/* display, filtros y lista de productos */}

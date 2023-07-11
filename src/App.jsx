@@ -62,6 +62,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$25',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Negro',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -69,15 +73,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 2,
@@ -86,6 +90,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '35',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Blanca',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -93,15 +101,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 3,
@@ -110,6 +118,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$20',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Gris',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -117,15 +129,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 4,
@@ -134,6 +146,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$40',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Multicolor',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -141,15 +157,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 5,
@@ -158,6 +174,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$40',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Azul',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -165,15 +185,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 6,
@@ -182,6 +202,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$43',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Gris',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -189,15 +213,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 7,
@@ -206,6 +230,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$30',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Salmon',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -213,15 +241,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 8,
@@ -230,6 +258,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$50',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Amarillo',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -237,15 +269,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     },
     {
         id: 9,
@@ -254,6 +286,10 @@ const products = [
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
         imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
         price: '$120',
+        quantity: 1,
+        rating: 3.9,
+        reviewCount: 117,
+        href: '#',
         color: 'Multicolor',
         colors: [
             { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -261,15 +297,15 @@ const products = [
             { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' }
         ],
         sizes: [
-        { name: 'XXS', inStock: true },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: 'XXL', inStock: true },
-        { name: 'XXXL', inStock: false },
-    ]
+            { name: 'XXS', inStock: true },
+            { name: 'XS', inStock: true },
+            { name: 'S', inStock: true },
+            { name: 'M', inStock: true },
+            { name: 'L', inStock: true },
+            { name: 'XL', inStock: true },
+            { name: 'XXL', inStock: true },
+            { name: 'XXXL', inStock: false },
+        ]
     }
     // More products...
 ]
@@ -283,21 +319,38 @@ export function App() {
     //Mostrar Carrito
     const [openCart, setOpenCart] = useState(false);
     const mostrarCarrito = () => setOpenCart(!openCart);
+
     //Producto Seleccionado
     const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+
     //Mostrar producto
     const [openView, setOpenView] = useState(false);
     const mostrarProducto = (id) => {
         setOpenView(!openView)
-        setProductoSeleccionado(products.find((p)=> p.id === id))
+        setProductoSeleccionado(products.find((p) => p.id === id))
     };
+
+    //carrito
+    const [carrito, setCarrito] = useState([]);
+    const cantidadCarrito = carrito.length;
+    const agregarProductoCarrito = () => {
+        const nuevoCarrito = [...carrito];
+        const productoNuevo = nuevoCarrito.findIndex((p) => p.id === productoSeleccionado.id);
+        if (productoNuevo<0) {
+            nuevoCarrito.push(productoSeleccionado)
+            setCarrito(nuevoCarrito)
+            return
+        }
+        nuevoCarrito[productoNuevo].quantity += 1;
+        setCarrito(nuevoCarrito)
+    }
 
     return (
         <>
             {/* navbar */}
-            <NavBar mostrarCarrito={mostrarCarrito} />
+            <NavBar mostrarCarrito={mostrarCarrito} cantidadCarrito={cantidadCarrito} />
             {/* Carrito de compras */}
-            <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} />
+            <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} carrito={carrito} />
             {/* Seccion Principal */}
             <div className='bg-white'>
                 <div>
@@ -325,7 +378,7 @@ export function App() {
                 </div>
             </div>
             {/* ver producto */}
-            <ProductoViews openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado}/>
+            <ProductoViews openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado} agregarProductoCarrito={agregarProductoCarrito} />
         </>
 
     );

@@ -27,8 +27,7 @@ const products = [
     // More products...
 ]
 
-export function ShoppingCart({openCart, setOpenCart}) {
-    
+export function ShoppingCart({openCart, setOpenCart, carrito}) {
     return (
         <Transition.Root show={openCart} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={setOpenCart}>
@@ -76,7 +75,7 @@ export function ShoppingCart({openCart, setOpenCart}) {
                                             <div className="mt-8">
                                                 <div className="flow-root">
                                                     <ul role="list" className="-my-6 divide-y divide-gray-200">
-                                                        {products.map((product) => (
+                                                        {carrito.map((product) => (
                                                             <li key={product.id} className="flex py-6">
                                                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                                                     <img

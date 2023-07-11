@@ -130,7 +130,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function NavBar({ mostrarCarrito}) {
+export function NavBar({ mostrarCarrito, cantidadCarrito}) {
     const [open, setOpen] = useState(true)
     return (
         <div className="bg-white">
@@ -431,7 +431,7 @@ export function NavBar({ mostrarCarrito}) {
                                 </div>
                                 
                                 {/* Cart */}
-                                <CartWidget mostrarCarrito={mostrarCarrito}/>
+                                <CartWidget mostrarCarrito={mostrarCarrito} cantidadCarrito={cantidadCarrito}/>
                             </div>
                         </div>
                     </div>

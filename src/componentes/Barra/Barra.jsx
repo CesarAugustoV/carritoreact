@@ -16,7 +16,6 @@ function classNames(...classes) {
 }
 
 export function Barra({setMobileFiltersOpen}) {
-
     return (
         <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">Recien llegados</h1>

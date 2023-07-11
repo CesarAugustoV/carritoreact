@@ -7,10 +7,11 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function ProductoViews({openView, setOpenView, productoSeleccionado}) {
+export function ProductoViews({openView, setOpenView, productoSeleccionado, agregarProductoCarrito}) {
     if(!productoSeleccionado){
         return
     }
+
     const [selectedColor, setSelectedColor] = useState(productoSeleccionado.colors[0])
     const [selectedSize, setSelectedSize] = useState(productoSeleccionado.sizes[2])
     
@@ -91,7 +92,7 @@ export function ProductoViews({openView, setOpenView, productoSeleccionado}) {
 
                                             <section aria-labelledby="options-heading" className="mt-10">
                                                 <h3 id="options-heading" className="sr-only">
-                                                    productoSeleccionado options
+                                                    product options
                                                 </h3>
 
                                                 <form>
@@ -196,6 +197,7 @@ export function ProductoViews({openView, setOpenView, productoSeleccionado}) {
                                                     <button
                                                         type="submit"
                                                         className="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                                        onClick={agregarProductoCarrito}
                                                     >
                                                         Add to bag
                                                     </button>

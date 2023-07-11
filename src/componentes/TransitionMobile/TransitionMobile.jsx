@@ -5,7 +5,6 @@ import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 
 export function TransitionMobile({filters, subCategories, mobileFiltersOpen
     ,setMobileFiltersOpen}) {
-    
     return (
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
             <Dialog as="div" className="relative z-40 lg:hidden" onClose={setMobileFiltersOpen}>

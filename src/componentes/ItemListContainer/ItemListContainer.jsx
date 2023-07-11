@@ -262,7 +262,8 @@ const products = [
 export function ItemListContainer({mostrarProducto}) {
 
 
-    const devolverProducto = (id) => {
+    const devolverProducto = (event, id) => {
+        event.preventDefault();
         mostrarProducto(products.find((p) => p.id === id));
     }
 
@@ -281,7 +282,7 @@ export function ItemListContainer({mostrarProducto}) {
                         <div>
                             <h3 className="text-sm text-gray-700">
                                 <button href={product.href}>
-                                    <span aria-hidden="true" className="absolute inset-0" onClick={() => devolverProducto(product.id)} />
+                                    <span aria-hidden="true" className="absolute inset-0" onClick={() => devolverProducto(event, product.id)} />
                                     {product.name}
                                 </button>
                             </h3>

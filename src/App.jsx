@@ -337,7 +337,7 @@ export function App() {
 
     //carrito
     const [carrito, setCarrito] = useState([]);
-    const cantidadCarrito = carrito.length;
+    let cantidadCarrito = carrito.length;
     const agregarProductoCarrito = () => {
         const nuevoCarrito = [...carrito];
         const productoNuevo = nuevoCarrito.findIndex((p) => p.id === productoSeleccionado.id);
@@ -352,12 +352,16 @@ export function App() {
         setOpenView(!openView)
     }
 
+    //actualizar precio del carrito
     const [precioTotal, setPrecioTotal] = useState(0);
     useEffect(() => {
         setPrecioTotal(carrito.reduce((ac, p) => {
             return ac += p.price * p.quantity
         }, 0))
     }, [carrito])
+
+    cantidadCarrito = carrito.reduce((ac, p) => ac+= p.quantity , 0);
+    
 
     return (
         <>

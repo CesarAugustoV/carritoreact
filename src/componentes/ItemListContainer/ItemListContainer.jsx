@@ -282,7 +282,7 @@ export function ItemListContainer({mostrarProducto}) {
                         <div>
                             <h3 className="text-sm text-gray-700">
                                 <button href={product.href}>
-                                    <span aria-hidden="true" className="absolute inset-0" onClick={() => devolverProducto(event, product.id)} />
+                                    <span aria-hidden="true" className="absolute inset-0" onClick={(event) => devolverProducto(event, product.id)} />
                                     {product.name}
                                 </button>
                             </h3>

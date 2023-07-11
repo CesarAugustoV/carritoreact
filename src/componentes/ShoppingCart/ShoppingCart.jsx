@@ -87,7 +87,7 @@ export function ShoppingCart({ openCart, setOpenCart, carrito, precioTotal, setC
                                                                             <button
                                                                                 type="button"
                                                                                 className="font-medium text-indigo-600 hover:text-indigo-500"
-                                                                                onClick={() => handleRemoveProduct(event, product.id)}
+                                                                                onClick={(event) => handleRemoveProduct(event, product.id)}
                                                                             >
                                                                                 Remove
                                                                             </button>

@@ -26,7 +26,8 @@ export function App() {
 
     let cantidadCarrito = carrito.length;
 
-    const agregarProductoCarrito = () => {
+    const agregarProductoCarrito = (event) => {
+        event.preventDefault();
         const nuevoCarrito = [...carrito];
         const productoNuevo = nuevoCarrito.findIndex((p) => p.id === productoSeleccionado.id);
         

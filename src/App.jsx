@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import { useState } from 'react';
 import {
@@ -6,6 +6,9 @@ import {
     ProductList, TransitionMobile,
     Filtros, ShoppingCart, Barra, Filters
 } from './componentes';
+
+
+
 
 
 const filters = [
@@ -61,7 +64,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$25',
+        price: 10,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -89,7 +92,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '35',
+        price: 15,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -117,7 +120,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$20',
+        price: 15,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -145,7 +148,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$40',
+        price: 18,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -173,7 +176,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$40',
+        price: 30,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -201,7 +204,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$43',
+        price: 35,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -229,7 +232,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$30',
+        price: 28,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -257,7 +260,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$50',
+        price: 38,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -285,7 +288,7 @@ const products = [
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
         imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
-        price: '$120',
+        price: 99,
         quantity: 1,
         rating: 3.9,
         reviewCount: 117,
@@ -309,6 +312,8 @@ const products = [
     }
     // More products...
 ]
+
+
 
 
 export function App() {
@@ -336,21 +341,30 @@ export function App() {
     const agregarProductoCarrito = () => {
         const nuevoCarrito = [...carrito];
         const productoNuevo = nuevoCarrito.findIndex((p) => p.id === productoSeleccionado.id);
-        if (productoNuevo<0) {
+        if (productoNuevo < 0) {
             nuevoCarrito.push(productoSeleccionado)
             setCarrito(nuevoCarrito)
+            setOpenView(!openView)
             return
         }
         nuevoCarrito[productoNuevo].quantity += 1;
         setCarrito(nuevoCarrito)
+        setOpenView(!openView)
     }
+
+    const [precioTotal, setPrecioTotal] = useState(0);
+    useEffect(() => {
+        setPrecioTotal(carrito.reduce((ac, p) => {
+            return ac += p.price * p.quantity
+        }, 0))
+    }, [carrito])
 
     return (
         <>
             {/* navbar */}
             <NavBar mostrarCarrito={mostrarCarrito} cantidadCarrito={cantidadCarrito} />
             {/* Carrito de compras */}
-            <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} carrito={carrito} />
+            <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} carrito={carrito} precioTotal={precioTotal} />
             {/* Seccion Principal */}
             <div className='bg-white'>
                 <div>

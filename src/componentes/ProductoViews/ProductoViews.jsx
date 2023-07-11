@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, RadioGroup, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/20/solid'
+import { formatter } from '../../usesCase/formatter'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -64,7 +65,7 @@ export function ProductoViews({openView, setOpenView, productoSeleccionado, agre
                                                     productoSeleccionado information
                                                 </h3>
 
-                                                <p className="text-2xl text-gray-900">{productoSeleccionado.price}</p>
+                                                <p className="text-2xl text-gray-900">{formatter.format(productoSeleccionado.price)}</p>
 
                                                 {/* Reviews */}
                                                 <div className="mt-6">

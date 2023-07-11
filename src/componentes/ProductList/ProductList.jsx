@@ -1,3 +1,5 @@
+import { formatter } from "../../usesCase/formatter"
+
 export function ProductList({products, mostrarProducto}) {
     const devolverProducto = (id) => {
         mostrarProducto(id)
@@ -24,7 +26,7 @@ export function ProductList({products, mostrarProducto}) {
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                                 </div>
-                                <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                                <p className="text-sm font-medium text-gray-900">{formatter.format(product.price)}</p>
                             </div>
                         </div>
                     ))}

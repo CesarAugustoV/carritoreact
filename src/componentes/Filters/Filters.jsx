@@ -16,48 +16,42 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { ItemListContainer } from '../ItemListContainer/ItemListContainer'
 
 const sortOptions = [
-    { name: 'Most Popular', href: '#', current: true },
-    { name: 'Best Rating', href: '#', current: false },
-    { name: 'Newest', href: '#', current: false },
-    { name: 'Price: Low to High', href: '#', current: false },
-    { name: 'Price: High to Low', href: '#', current: false },
-]
-const subCategories = [
-    { name: 'Totes', href: '#' },
-    { name: 'Backpacks', href: '#' },
-    { name: 'Travel Bags', href: '#' },
-    { name: 'Hip Bags', href: '#' },
-    { name: 'Laptop Sleeves', href: '#' },
+    { name: 'Popular', href: '#', current: true },
+    { name: 'Mejor valuado', href: '#', current: false },
+    { name: 'Nuevo', href: '#', current: false },
+    { name: 'Precio: menor a mayor', href: '#', current: false },
+    { name: 'Precio: mayor a menor', href: '#', current: false },
 ]
 const filters = [
     {
         id: 'color',
         name: 'Color',
         options: [
-            { value: 'white', label: 'White', checked: false },
+            { value: 'blanco', label: 'Blanco', checked: false },
             { value: 'beige', label: 'Beige', checked: false },
-            { value: 'blue', label: 'Blue', checked: true },
-            { value: 'brown', label: 'Brown', checked: false },
-            { value: 'green', label: 'Green', checked: false },
-            { value: 'purple', label: 'Purple', checked: false },
+            { value: 'azul', label: 'Azul', checked: true },
+            { value: 'marron', label: 'Marron', checked: false },
+            { value: 'verde', label: 'Verde', checked: false },
+            { value: 'purpura', label: 'Purpura', checked: false },
         ],
     },
     {
-        id: 'category',
-        name: 'Category',
+        id: 'categoria',
+        name: 'Categoria',
         options: [
-            { value: 'new-arrivals', label: 'New Arrivals', checked: false },
+            { value: 'nuevo', label: 'Nuevos productos', checked: false },
             { value: 'sale', label: 'Sale', checked: false },
-            { value: 'travel', label: 'Travel', checked: true },
-            { value: 'organization', label: 'Organization', checked: false },
+            { value: 'bolsos', label: 'Bolsos', checked: true },
+            { value: 'cateras', label: 'Carteras', checked: false },
             { value: 'accessories', label: 'Accessories', checked: false },
         ],
     },
     {
-        id: 'size',
-        name: 'Size',
+        id: 'tamaño',
+        name: 'Tamaño',
         options: [
             { value: '2l', label: '2L', checked: false },
             { value: '6l', label: '6L', checked: false },
@@ -66,14 +60,22 @@ const filters = [
             { value: '20l', label: '20L', checked: false },
             { value: '40l', label: '40L', checked: true },
         ],
-    },
+    }
+]
+
+const subCategories = [
+    { name: 'Camiseta', href: '#' },
+    { name: 'Bolsos', href: '#' },
+    { name: 'Zapatos', href: '#' },
+    { name: 'Fundas portatiles', href: '#' },
+    { name: 'Accesorios', href: '#' },
 ]
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function Filters() {
+export function Filters({mostrarProducto}) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     return (
@@ -306,7 +308,7 @@ export function Filters() {
                             {/* Product grid */}
                             <div className="lg:col-span-3">
                                 {/* Your content */}
-
+                                <ItemListContainer mostrarProducto={mostrarProducto}/>
                             </div>
                         </div>
                     </section>

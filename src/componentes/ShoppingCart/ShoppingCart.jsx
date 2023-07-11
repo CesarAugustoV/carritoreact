@@ -4,8 +4,13 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { formatter } from '../../usesCase/formatter'
 
 
-export function ShoppingCart({openCart, setOpenCart, carrito, precioTotal}) {
+export function ShoppingCart({openCart, setOpenCart, carrito, precioTotal, setCarrito}) {
     
+    const handleRemoveProduct = (id) =>{
+           const carritoNuevo =  carrito.filter(p => p.id !== id)
+           if (carrito.length == 1) setOpenCart(!openCart)
+           setCarrito(carritoNuevo)
+    }
 
     return (
         <Transition.Root show={openCart} as={Fragment}>
@@ -70,7 +75,7 @@ export function ShoppingCart({openCart, setOpenCart, carrito, precioTotal}) {
                                                                             <h3>
                                                                                 <a href={product.href}>{product.name}</a>
                                                                             </h3>
-                                                                            <p className="ml-4">{formatter.format(product.price)}</p>
+                                                                            <p className="ml-4">{formatter.format(product.price*product.quantity)}</p>
                                                                         </div>
                                                                         <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                                                                     </div>
@@ -81,6 +86,7 @@ export function ShoppingCart({openCart, setOpenCart, carrito, precioTotal}) {
                                                                             <button
                                                                                 type="button"
                                                                                 className="font-medium text-indigo-600 hover:text-indigo-500"
+                                                                                onClick={()=>handleRemoveProduct(product.id)}
                                                                             >
                                                                                 Remove
                                                                             </button>

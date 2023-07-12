@@ -1,19 +1,5 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useEffect, useState } from 'react'
-import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
+import { Dialog, Disclosure, FocusTrap, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import { productsPromise } from '../lib/products.request'
@@ -76,16 +62,16 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function Home({mostrarProducto}) {
+export function Home({ mostrarProducto }) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
+    // lista de productos
     const [products, setProducts] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         productsPromise()
-                        .then(res=>setProducts(res))
-    },[])
-
+            .then(res => setProducts(res))
+    }, [])
 
     return (
         <div className="bg-white">
@@ -317,7 +303,7 @@ export function Home({mostrarProducto}) {
                             {/* Product grid */}
                             <div className="lg:col-span-3">
                                 {/* Your content */}
-                                <ItemListContainer products={products} mostrarProducto={mostrarProducto}/>
+                                    <ItemListContainer products={products} mostrarProducto={mostrarProducto} />
                             </div>
                         </div>
                     </section>

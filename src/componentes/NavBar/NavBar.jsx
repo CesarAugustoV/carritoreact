@@ -130,13 +130,13 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function NavBar({ mostrarCarrito, cantidadCarrito}) {
+export function NavBar({ mostrarCarrito, cantidadCarrito }) {
     const [open, setOpen] = useState(true)
     return (
         <div className="bg-white">
             {/* Mobile menu */}
             <Transition.Root show={open} as={Fragment}>
-                <Dialog as="div" className="relative z-50 lg:hidden" onClose={setOpen}>
+                <Dialog as="div" className="relative z-10 lg:hidden" onClose={setOpen}>
                     <Transition.Child
                         as={Fragment}
                         enter="transition-opacity ease-linear duration-300"
@@ -260,7 +260,7 @@ export function NavBar({ mostrarCarrito, cantidadCarrito}) {
                                 <div className="border-t border-gray-200 px-4 py-6">
                                     <a href="#" className="-m-2 flex items-center p-2">
                                         <img
-                                            src="https://tailwindui.com/img/flags/flag-chile.svg"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/1599px-Flag_of_Chile.svg.png"
                                             alt=""
                                             className="block h-auto w-5 flex-shrink-0"
                                         />
@@ -286,7 +286,6 @@ export function NavBar({ mostrarCarrito, cantidadCarrito}) {
                                 <span className="sr-only">Open menu</span>
                                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                             </button>
-
                             {/* Logo */}
                             <div className="ml-4 flex lg:ml-0">
                                 <a href="#">
@@ -429,9 +428,9 @@ export function NavBar({ mostrarCarrito, cantidadCarrito}) {
                                         <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                                     </a>
                                 </div>
-                                
+
                                 {/* Cart */}
-                                <CartWidget mostrarCarrito={mostrarCarrito} cantidadCarrito={cantidadCarrito}/>
+                                <CartWidget mostrarCarrito={mostrarCarrito} cantidadCarrito={cantidadCarrito} />
                             </div>
                         </div>
                     </div>

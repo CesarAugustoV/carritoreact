@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import './App.css'
 import { useState } from 'react';
 import {
-    NavBar, ProductoViews,
-    ShoppingCart, Filters
+    NavBar,
+    ShoppingCart
 } from './componentes';
-import { Home } from './pages/home';
+import { Home } from './pages/Home';
+import { Detail } from './pages/Detail';
+
 
 
 export function App() {
@@ -60,13 +62,13 @@ export function App() {
         <>
             {/* navbar */}
             <NavBar mostrarCarrito={mostrarCarrito} cantidadCarrito={cantidadCarrito} />
-            {/* page home */}
-            <Home mostrarProducto={mostrarProducto}/>
             {/* Carrito de compras */}
             <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} carrito={carrito} setCarrito={setCarrito} precioTotal={precioTotal} />
+            {/* page home */}
+            <Home mostrarProducto={mostrarProducto}/>
             {/* ver producto */}
-            <ProductoViews openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado} agregarProductoCarrito={agregarProductoCarrito} />
-            {/* <Filters mostrarProducto={mostrarProducto}/> */}
+            <Detail openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado} agregarProductoCarrito={agregarProductoCarrito} />
+
         </>
 
     );

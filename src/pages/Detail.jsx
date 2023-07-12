@@ -2,20 +2,22 @@ import { Fragment, useState } from 'react'
 import { Dialog, RadioGroup, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/20/solid'
-import { formatter } from '../../usesCase/formatter'
+import { formatter } from '../usesCase/formatter'
+
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
-
-export function ProductoViews({openView, setOpenView, productoSeleccionado, agregarProductoCarrito}) {
-    if(!productoSeleccionado){
+export function Detail({ openView, setOpenView, productoSeleccionado, agregarProductoCarrito }) {
+    if (!productoSeleccionado) {
         return
     }
 
     const [selectedColor, setSelectedColor] = useState(productoSeleccionado.colors[0])
     const [selectedSize, setSelectedSize] = useState(productoSeleccionado.sizes[2])
-    
+
+
     return (
         <Transition.Root show={openView} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={setOpenView}>
@@ -197,7 +199,7 @@ export function ProductoViews({openView, setOpenView, productoSeleccionado, agre
 
                                                     <button
                                                         className="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                        onClick={agregarProductoCarrito}
+                                                        onClick={(event) => { agregarProductoCarrito(event);}}
                                                     >
                                                         Add to bag
                                                     </button>

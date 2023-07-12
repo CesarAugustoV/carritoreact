@@ -12,11 +12,12 @@
   }
   ```
 */
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import { ItemListContainer } from '../ItemListContainer/ItemListContainer'
+import { productsPromise } from '../lib/products.request'
+import { ItemListContainer } from '../componentes'
 
 const sortOptions = [
     { name: 'Popular', href: '#', current: true },
@@ -75,8 +76,16 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function Filters({mostrarProducto}) {
+export function Home({mostrarProducto}) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(()=>{
+        productsPromise()
+                        .then(res=>setProducts(res))
+    },[])
+
 
     return (
         <div className="bg-white">
@@ -308,7 +317,7 @@ export function Filters({mostrarProducto}) {
                             {/* Product grid */}
                             <div className="lg:col-span-3">
                                 {/* Your content */}
-                                <ItemListContainer mostrarProducto={mostrarProducto}/>
+                                <ItemListContainer products={products} mostrarProducto={mostrarProducto}/>
                             </div>
                         </div>
                     </section>

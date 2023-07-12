@@ -5,6 +5,7 @@ import {
     NavBar, ProductoViews,
     ShoppingCart, Filters
 } from './componentes';
+import { Home } from './pages/home';
 
 
 export function App() {
@@ -59,11 +60,13 @@ export function App() {
         <>
             {/* navbar */}
             <NavBar mostrarCarrito={mostrarCarrito} cantidadCarrito={cantidadCarrito} />
+            {/* page home */}
+            <Home mostrarProducto={mostrarProducto}/>
             {/* Carrito de compras */}
             <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} carrito={carrito} setCarrito={setCarrito} precioTotal={precioTotal} />
             {/* ver producto */}
             <ProductoViews openView={openView} setOpenView={setOpenView} productoSeleccionado={productoSeleccionado} agregarProductoCarrito={agregarProductoCarrito} />
-            <Filters mostrarProducto={mostrarProducto}/>
+            {/* <Filters mostrarProducto={mostrarProducto}/> */}
         </>
 
     );

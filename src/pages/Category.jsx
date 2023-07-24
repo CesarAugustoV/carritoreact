@@ -5,6 +5,7 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from
 import { productsPromise } from '../lib/products.request'
 import { ItemListContainer } from '../componentes'
 import { Suspense } from 'react'
+import { useParams } from 'react-router-dom'
 
 const sortOptions = [
     { name: 'Popular', href: '#', current: true },
@@ -63,7 +64,9 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function Home({ mostrarProducto }) {
+export function Category({ mostrarProducto }) {
+
+    const {id} = useParams();
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     return (
@@ -296,7 +299,7 @@ export function Home({ mostrarProducto }) {
                             {/* Product grid */}
                             <div className="lg:col-span-3">
                                 {/* Your content */}
-                                    <ItemListContainer/>
+                                <ItemListContainer id={id} />
                             </div>
                         </div>
                     </section>

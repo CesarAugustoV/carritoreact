@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom"
 import { formatter } from "../../usesCase/formatter"
 
 
 
 export function Item({devolverProducto, id,  imageSrc ,imageAlt ,href ,name ,color ,price}) {
+
+    const navigate = useNavigate();
+
     return (
-        <div className="group relative z-0">
+        
+        <div className="group relative z-0" onClick={()=> navigate(`/item/${id}`)}>
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 <img
                     src={imageSrc}

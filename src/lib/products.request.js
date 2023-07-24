@@ -1,6 +1,9 @@
 const PRODUCTOS = [{
         id: 1,
         name: 'Camiseta basica',
+        category: {
+            sex: 'men'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -63,6 +66,9 @@ const PRODUCTOS = [{
     {
         id: 2,
         name: 'Camiseta estilo',
+        category: {
+            sex: 'men'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -125,6 +131,9 @@ const PRODUCTOS = [{
     {
         id: 3,
         name: 'Camiseta gris',
+        category: {
+            sex: 'men'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -187,6 +196,9 @@ const PRODUCTOS = [{
     {
         id: 4,
         name: 'Camiseta figura',
+        category: {
+            sex: 'women'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -249,6 +261,9 @@ const PRODUCTOS = [{
     {
         id: 5,
         name: 'Bolso de mano',
+        category: {
+            sex: 'women'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -311,6 +326,9 @@ const PRODUCTOS = [{
     {
         id: 6,
         name: 'Cartera',
+        category: {
+            sex: 'women'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -373,6 +391,9 @@ const PRODUCTOS = [{
     {
         id: 7,
         name: 'Bolso pequeño',
+        category: {
+            sex: 'women'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -435,6 +456,9 @@ const PRODUCTOS = [{
     {
         id: 8,
         name: 'Catera estilo',
+        category: {
+            sex: 'women'
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
@@ -497,6 +521,10 @@ const PRODUCTOS = [{
     {
         id: 9,
         name: 'Camisetas basicas 6-pack',
+        category: {
+            sex: 'men',
+            oferta: true,
+        },
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
         imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
@@ -560,10 +588,22 @@ const PRODUCTOS = [{
 ]
 
 
-export const productsPromise = () => {
+export const productsPromise = (id) => {
+    const _products = id ? PRODUCTOS.filter((product) => product.category.sex.toLowerCase() === id) : PRODUCTOS;
+
     return new Promise((res)=>{
         setTimeout(() => {
-            res(PRODUCTOS)
-        }, 2000);
+            res(_products)
+        }, 500);
+    })
+};
+
+export const productsPromiseId = (id) => {
+    const producto = PRODUCTOS.filter((product)=> product.id === id)[0];
+
+    return new Promise((res)=>{
+        setTimeout(() => {
+            res(producto)
+        }, 500);
     })
 };

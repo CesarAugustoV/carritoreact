@@ -6,6 +6,7 @@ import { productsPromise } from '../lib/products.request'
 import { ItemListContainer } from '../componentes'
 import { Suspense } from 'react'
 
+
 const sortOptions = [
     { name: 'Popular', href: '#', current: true },
     { name: 'Mejor valuado', href: '#', current: false },
@@ -64,7 +65,8 @@ function classNames(...classes) {
 }
 
 export function Home({ mostrarProducto }) {
-    const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+    
+    const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
     return (
         <div className="bg-white">

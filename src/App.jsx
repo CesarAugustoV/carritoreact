@@ -8,7 +8,7 @@ import { Home } from './pages/Home';
 import { Details } from './pages/Details';
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router-dom';
 import { Category } from './pages/Category';
-import { NotFound } from './pages/notFound';
+import { NotFound } from './pages/NotFound';
 
 
 

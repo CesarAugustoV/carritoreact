@@ -24,52 +24,6 @@ const routes = createBrowserRouter(createRoutesFromElements(
 
 
 export function App() {
-// TODO
-    //Mostrar Carrito
-    const [openCart, setOpenCart] = useState(false);
-    const mostrarCarrito = () => setOpenCart(!openCart);
-
-    //Mostrar producto
-    const [productoSeleccionado, setProductoSeleccionado] = useState();
-    const [openView, setOpenView] = useState(false);
-    const mostrarProducto = (producto) => {
-        setOpenView(!openView)
-        setProductoSeleccionado(producto)
-    };
-
-    //carrito
-    const [carrito, setCarrito] = useState([]);
-
-    let cantidadCarrito = carrito.length;
-
-    const agregarProductoCarrito = (event) => {
-        event.preventDefault();
-        const nuevoCarrito = [...carrito];
-        const productoNuevo = nuevoCarrito.findIndex((p) => p.id === productoSeleccionado.id);
-
-        if (productoNuevo < 0) {
-            nuevoCarrito.push(productoSeleccionado)
-            setCarrito(nuevoCarrito)
-            setOpenView(!openView)
-            return
-        }
-
-        nuevoCarrito[productoNuevo].quantity += 1;
-        setCarrito(nuevoCarrito)
-        setOpenView(!openView)
-    }
-
-
-    //actualizar precio del carrito
-    const [precioTotal, setPrecioTotal] = useState(0);
-    useEffect(() => {
-        setPrecioTotal(carrito.reduce((ac, p) => {
-            return ac += p.price * p.quantity
-        }, 0))
-    }, [carrito])
-
-    cantidadCarrito = carrito.reduce((ac, p) => ac += p.quantity, 0);
-
 
     return (
         <>

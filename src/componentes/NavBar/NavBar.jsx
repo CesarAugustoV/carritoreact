@@ -122,7 +122,7 @@ const navigation = {
     //     },
     // ],
     pages: [
-        { name: 'Home', rute: '/' },
+        { name: 'Inicio', rute: '/' },
         { name: 'Hombre', rute: '/category/men' },
         { name: 'Mujer', rute: '/category/women' },
     ],

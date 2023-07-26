@@ -26,6 +26,8 @@ import { useEffect } from 'react'
 import { productsPromiseId } from '../lib/products.request'
 import { useParams } from 'react-router-dom'
 import { formatter } from '../usesCase/formatter'
+import { useQuery } from '../hooks/useQuery'
+import { DotLoader, FadeLoader, ScaleLoader } from 'react-spinners'
 
 const product = {
     name: 'Basic Tee 6-Pack',
@@ -91,25 +93,19 @@ function classNames(...classes) {
 }
 
 export function Details() {
-    
-    const {id} = useParams();
-    const [producto, setProducto] = useState({});
-    
-    useEffect(()=>{ 
-        productsPromiseId(+id)
-        .then(res => setProducto(res))
-    },[]);
-    
-    
-    const [selectedColor, setSelectedColor] = useState()
-    const [selectedSize, setSelectedSize] = useState()
-    
-    
-    if(!Object.keys(producto).length){
-        return
-    }
-    
 
+    const { id } = useParams();
+
+    const { data, loading } = useQuery(productsPromiseId, +id);
+
+    const [selectedColor, setSelectedColor] = useState();
+    const [selectedSize, setSelectedSize] = useState();
+
+    if (loading) {
+        return <div style={{position: 'fixed', top: "0", left: "0", width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center",}}><ScaleLoader color="#36d7b7" size={100}  cssOverride={{ height: "30px", width: "30px" }}/></div>
+    }
+
+    if (!data) return
 
     return (
         <div className="bg-white">
@@ -137,7 +133,7 @@ export function Details() {
                         ))}
                         <li className="text-sm">
                             <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                                {producto.name}
+                                {data.name}
                             </a>
                         </li>
                     </ol>
@@ -145,10 +141,10 @@ export function Details() {
 
                 {/* Image gallery */}
                 <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-1xl lg:grid-cols-1 lg:gap-x-8 lg:px-8">
-                    <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+                    <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
                         <img
-                            src={producto.imageSrc}
-                            alt={producto.imageAlt}
+                            src={data.imageSrc}
+                            alt={data.imageAlt}
                             className="h-full w-full object-cover object-center"
                         />
                     </div>
@@ -157,13 +153,13 @@ export function Details() {
                 {/* Product info */}
                 <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
                     <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{producto.name}</h1>
+                        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{data.name}</h1>
                     </div>
 
                     {/* Options */}
                     <div className="mt-4 lg:row-span-3 lg:mt-0">
                         <h2 className="sr-only">Product information</h2>
-                        <p className="text-3xl tracking-tight text-gray-900">{formatter.format(producto.price)}</p>
+                        <p className="text-3xl tracking-tight text-gray-900">{formatter.format(data.price)}</p>
 
                         {/* Reviews */}
                         <div className="mt-6">
@@ -196,7 +192,7 @@ export function Details() {
                                 <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
                                     <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
                                     <div className="flex items-center space-x-3">
-                                        {producto.colors.map((color) => (
+                                        {data.colors.map((color) => (
                                             <RadioGroup.Option
                                                 key={color.name}
                                                 value={color}
@@ -237,7 +233,7 @@ export function Details() {
                                 <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
                                     <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
                                     <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                                        {producto.sizes.map((size) => (
+                                        {data.sizes.map((size) => (
                                             <RadioGroup.Option
                                                 key={size.name}
                                                 value={size}

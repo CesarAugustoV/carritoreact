@@ -444,7 +444,7 @@ export function NavBar() {
                     </div>
                 </nav>
             </header>
-            <Outlet />
+            <Outlet/>
         </div>
     )
 }

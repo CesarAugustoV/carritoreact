@@ -594,7 +594,7 @@ export const productsPromise = (id) => {
     return new Promise((res)=>{
         setTimeout(() => {
             res(_products)
-        }, 500);
+        }, 1000);
     })
 };
 
@@ -604,6 +604,6 @@ export const productsPromiseId = (id) => {
     return new Promise((res)=>{
         setTimeout(() => {
             res(producto)
-        }, 500);
+        }, 1000);
     })
 };

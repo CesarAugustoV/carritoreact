@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { ScaleLoader } from 'react-spinners';
 import { useQuery } from '../../hooks/useQuery';
 import { productsPromise } from '../../lib/products.request';
 import { Item } from '../Item/Item'
@@ -11,7 +12,7 @@ export function ItemListContainer({ id }) {
     const { data, loading } = useQuery(productsPromise, id);
     
     if (loading) {
-        return <div>Cargando...</div>
+        return <div style={{position: 'fixed', top: "0", left: "10%", width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center",}}><ScaleLoader color="#36d7b7" size={100}  cssOverride={{ height: "30px", width: "30px" }}/></div>
     }
 
 

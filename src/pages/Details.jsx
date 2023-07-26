@@ -24,18 +24,19 @@ import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
 import { useEffect } from 'react'
 import { productsPromiseId } from '../lib/products.request'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { formatter } from '../usesCase/formatter'
 import { useQuery } from '../hooks/useQuery'
-import { DotLoader, FadeLoader, ScaleLoader } from 'react-spinners'
+import { ScaleLoader } from 'react-spinners'
 
 const product = {
     name: 'Basic Tee 6-Pack',
     price: '$192',
     href: '#',
     breadcrumbs: [
-        { id: 1, name: 'Men', href: '#' },
-        { id: 2, name: 'Clothing', href: '#' },
+        { id: 1, name: 'Inicio', href: '#', rute: '/'},
+        { id: 2, name: 'Hombre', href: '#', rute: '/category/men'},
+        { id: 2, name: 'Mujer', href: '#', rute: '/category/women'},
     ],
     images: [
         {
@@ -115,9 +116,9 @@ export function Details() {
                         {product.breadcrumbs.map((breadcrumb) => (
                             <li key={breadcrumb.id}>
                                 <div className="flex items-center">
-                                    <a href={breadcrumb.href} className="mr-2 text-sm font-medium text-gray-900">
+                                    <NavLink href={breadcrumb.href} to={breadcrumb.rute} className="mr-2 text-sm font-medium text-gray-900">
                                         {breadcrumb.name}
-                                    </a>
+                                    </NavLink>
                                     <svg
                                         width={16}
                                         height={20}

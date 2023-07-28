@@ -64,7 +64,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function Category({ mostrarProducto }) {
+export function Category() {
 
     const {id} = useParams();
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)

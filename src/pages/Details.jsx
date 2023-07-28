@@ -1,24 +1,4 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        gridTemplateRows: {
-          '[auto,auto,1fr]': 'auto auto 1fr',
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
@@ -28,15 +8,17 @@ import { NavLink, useParams } from 'react-router-dom'
 import { formatter } from '../usesCase/formatter'
 import { useQuery } from '../hooks/useQuery'
 import { ScaleLoader } from 'react-spinners'
+import { useCartContext } from '../state/cart.context'
+import { useSpring, animated, config} from 'react-spring';
 
 const product = {
     name: 'Basic Tee 6-Pack',
     price: '$192',
     href: '#',
     breadcrumbs: [
-        { id: 1, name: 'Inicio', href: '#', rute: '/'},
-        { id: 2, name: 'Hombre', href: '#', rute: '/category/men'},
-        { id: 2, name: 'Mujer', href: '#', rute: '/category/women'},
+        { id: 1, name: 'Inicio', href: '#', rute: '/' },
+        { id: 2, name: 'Hombre', href: '#', rute: '/category/men' },
+        { id: 3, name: 'Mujer', href: '#', rute: '/category/women' },
     ],
     images: [
         {
@@ -97,19 +79,44 @@ export function Details() {
 
     const { id } = useParams();
 
+    const [show, setShow] = useState(false);
+
     const { data, loading } = useQuery(productsPromiseId, +id);
+
+    useEffect(() => {
+        if (data) {
+            setShow(true)
+        }
+    }, [loading])
+    
+    const fadeAnimation = useSpring({
+        opacity: show ? 1 : 0,
+        config: {
+            duration: 500,
+        }
+    });
+
+
+    const { addProduct } = useCartContext();
+
+    const handleAdd = (() => {
+        addProduct()
+    })
 
     const [selectedColor, setSelectedColor] = useState();
     const [selectedSize, setSelectedSize] = useState();
 
     if (loading) {
-        return <div style={{position: 'fixed', top: "0", left: "0", width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center",}}><ScaleLoader color="#36d7b7" size={100}  cssOverride={{ height: "30px", width: "30px" }}/></div>
+        return <div style={{ position: 'fixed', top: "0", left: "0", width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", }}><ScaleLoader color="#36d7b7" size={100} cssOverride={{ height: "30px", width: "30px" }} /></div>
     }
 
-    if (!data) return
+    if (!data) {
+        return
+    }
+
 
     return (
-        <div className="bg-white">
+        <animated.div style={fadeAnimation} className="bg-white">
             <div className="pt-6">
                 <nav aria-label="Breadcrumb">
                     <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -327,6 +334,6 @@ export function Details() {
                     </div>
                 </div>
             </div>
-        </div>
+        </animated.div>
     )
 }

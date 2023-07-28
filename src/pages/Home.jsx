@@ -2,9 +2,7 @@ import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import { productsPromise } from '../lib/products.request'
 import { ItemListContainer } from '../componentes'
-import { Suspense } from 'react'
 
 
 const sortOptions = [
@@ -64,9 +62,10 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export function Home({ mostrarProducto }) {
+export function Home() {
     
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+    
 
     return (
         <div className="bg-white">

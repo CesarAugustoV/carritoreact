@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Counter = ({ stock, onAdd }) => {
+export const Counter = ({ stock, handleAdd }) => {
     const [count, setContador] = useState(1);
     const handleContador = (e, operacion) => {
         e.preventDefault();
@@ -40,7 +40,7 @@ export const Counter = ({ stock, onAdd }) => {
                 onClick={
                     (e) => {
                         e.preventDefault()
-                        onAdd(count)
+                        handleAdd(count)
                     }
                 }
             >

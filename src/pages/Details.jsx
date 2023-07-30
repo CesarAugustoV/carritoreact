@@ -51,7 +51,7 @@ export function Details() {
     });
     
     //contexto
-    const { addProduct} = useCartContext();
+    const { addProduct } = useCartContext();
 
     const handleAdd = ((qty) => {
         addProduct(data, qty);
@@ -246,7 +246,7 @@ export function Details() {
                             </div>
 
 
-                            <Counter stock={data.stock} onAdd={handleAdd}/>
+                            <Counter stock={data.stock} handleAdd={handleAdd}/>
 
 
 

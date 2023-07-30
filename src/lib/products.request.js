@@ -8,7 +8,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 10,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -61,7 +61,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 2,
@@ -73,7 +81,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 15,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -126,7 +134,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 3,
@@ -138,7 +154,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 15,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -191,7 +207,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 4,
@@ -203,7 +227,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 18,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -256,7 +280,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 5,
@@ -268,7 +300,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 30,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -321,7 +353,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 6,
@@ -333,7 +373,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 35,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -386,7 +426,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 7,
@@ -398,7 +446,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 28,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -451,7 +499,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 8,
@@ -463,7 +519,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-02.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 38,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -516,7 +572,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
         id: 9,
@@ -529,7 +593,7 @@ const PRODUCTOS = [{
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
         imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
         price: 99,
-        quantity: 1,
+        stock: 10,
         rating: 3.9,
         reviewCount: 117,
         href: '#',
@@ -582,7 +646,15 @@ const PRODUCTOS = [{
                 name: 'XXXL',
                 inStock: false
             },
-        ]
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     }
     // More products...
 ]
@@ -591,7 +663,7 @@ const PRODUCTOS = [{
 export const productsPromise = (id) => {
     const _products = id ? PRODUCTOS.filter((product) => product.category.sex.toLowerCase() === id) : PRODUCTOS;
 
-    return new Promise((res)=>{
+    return new Promise((res) => {
         setTimeout(() => {
             res(_products)
         }, 1000);
@@ -599,9 +671,9 @@ export const productsPromise = (id) => {
 };
 
 export const productsPromiseId = (id) => {
-    const producto = PRODUCTOS.filter((product)=> product.id === id)[0];
+    const producto = PRODUCTOS.filter((product) => product.id === id)[0];
 
-    return new Promise((res)=>{
+    return new Promise((res) => {
         setTimeout(() => {
             res(producto)
         }, 1000);

@@ -2,16 +2,25 @@ import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { formatter } from '../../usesCase/formatter'
+import { useCartContext } from '../../state/cart.context';
 
 
-export function ShoppingCart({ openCart, setOpenCart, carrito, precioTotal, setCarrito }) {
+export function ShoppingCart({ openCart, setOpenCart }) {
 
-    const handleRemoveProduct = (event, id) => {
-        event.preventDefault();
-        const carritoNuevo = carrito.filter(p => p.id !== id)
-        if (carrito.length == 1) setOpenCart(!openCart)
-        setCarrito(carritoNuevo)
+    // const handleRemoveProduct = (event, id) => {
+    //     event.preventDefault();
+    //     const carritoNuevo = carrito.filter(p => p.id !== id)
+    //     if (carrito.length == 1) setOpenCart(!openCart)
+    //     setCarrito(carritoNuevo)
+    // }
+
+    const { cart, getTotalPrice, removeProduct, cleanCart } = useCartContext();
+
+    if (cart.length === 0) {
+        setOpenCart(false)
     }
+
+
 
     return (
         <Transition.Root show={openCart} as={Fragment}>
@@ -60,7 +69,7 @@ export function ShoppingCart({ openCart, setOpenCart, carrito, precioTotal, setC
                                             <div className="mt-8">
                                                 <div className="flow-root">
                                                     <ul role="list" className="-my-6 divide-y divide-gray-200">
-                                                        {carrito.map((product) => (
+                                                        {cart.map((product) => (
                                                             <li key={product.id} className="flex py-6">
                                                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                                                     <img
@@ -76,18 +85,18 @@ export function ShoppingCart({ openCart, setOpenCart, carrito, precioTotal, setC
                                                                             <h3>
                                                                                 <a href={product.href}>{product.name}</a>
                                                                             </h3>
-                                                                            <p className="ml-4">{formatter.format(product.price * product.quantity)}</p>
+                                                                            <p className="ml-4">{formatter.format(product.price * product.qty)}</p>
                                                                         </div>
                                                                         <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                                                                     </div>
                                                                     <div className="flex flex-1 items-end justify-between text-sm">
-                                                                        <p className="text-gray-500">Qty {product.quantity}</p>
+                                                                        <p className="text-gray-500">Qty {product.qty}</p>
 
                                                                         <div className="flex">
                                                                             <button
                                                                                 type="button"
                                                                                 className="font-medium text-indigo-600 hover:text-indigo-500"
-                                                                                onClick={(event) => handleRemoveProduct(event, product.id)}
+                                                                                onClick={() => removeProduct(product.id)}
                                                                             >
                                                                                 Remove
                                                                             </button>
@@ -100,11 +109,19 @@ export function ShoppingCart({ openCart, setOpenCart, carrito, precioTotal, setC
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div className="m-3 mb-0">
+                                            <button
+                                                href="#"
+                                                className="flex items-center mb-3 justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                                                onClick={cleanCart}
+                                            >
+                                                Vaciar
+                                            </button>
+                                        </div>
                                         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                                             <div className="flex justify-between text-base font-medium text-gray-900">
                                                 <p>Subtotal</p>
-                                                <p>{formatter.format(precioTotal)}</p>
+                                                <p>{formatter.format(getTotalPrice())}</p>
                                             </div>
                                             <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                                             <div className="mt-6">
@@ -117,7 +134,7 @@ export function ShoppingCart({ openCart, setOpenCart, carrito, precioTotal, setC
                                             </div>
                                             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                                 <p>
-                                                    or
+                                                    <span> or </span>
                                                     <button
                                                         type="button"
                                                         className="font-medium text-indigo-600 hover:text-indigo-500"

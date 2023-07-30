@@ -8,62 +8,16 @@ import { NavLink, useParams } from 'react-router-dom'
 import { formatter } from '../usesCase/formatter'
 import { useQuery } from '../hooks/useQuery'
 import { ScaleLoader } from 'react-spinners'
-import { useCartContext } from '../state/cart.context'
-import { useSpring, animated, config} from 'react-spring';
+import { useCartContext } from '../state/Cart.context'
+import { useSpring, animated } from 'react-spring';
+import { Counter } from '../componentes/Counter/Counter'
 
-const product = {
-    name: 'Basic Tee 6-Pack',
-    price: '$192',
-    href: '#',
-    breadcrumbs: [
-        { id: 1, name: 'Inicio', href: '#', rute: '/' },
-        { id: 2, name: 'Hombre', href: '#', rute: '/category/men' },
-        { id: 3, name: 'Mujer', href: '#', rute: '/category/women' },
-    ],
-    images: [
-        {
-            src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg',
-            alt: 'Two each of gray, white, and black shirts laying flat.',
-        },
-        {
-            src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg',
-            alt: 'Model wearing plain black basic tee.',
-        },
-        {
-            src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg',
-            alt: 'Model wearing plain gray basic tee.',
-        },
-        {
-            src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg',
-            alt: 'Model wearing plain white basic tee.',
-        },
-    ],
-    colors: [
-        { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-        { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-        { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-    ],
-    sizes: [
-        { name: 'XXS', inStock: false },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: '2XL', inStock: true },
-        { name: '3XL', inStock: true },
-    ],
-    description:
-        'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
-    highlights: [
-        'Hand cut and sewn locally',
-        'Dyed with our proprietary colors',
-        'Pre-washed & pre-shrunk',
-        'Ultra-soft 100% cotton',
-    ],
-    details:
-        'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
-}
+const breadcrumbs = [
+    { id: 1, name: 'Inicio', href: '#', rute: '/' },
+    { id: 2, name: 'Hombre', href: '#', rute: '/category/men' },
+    { id: 3, name: 'Mujer', href: '#', rute: '/category/women' },
+];
+
 const reviews = { href: '#', average: 4, totalCount: 117 }
 
 
@@ -78,30 +32,30 @@ function classNames(...classes) {
 export function Details() {
 
     const { id } = useParams();
-
     const [show, setShow] = useState(false);
 
     const { data, loading } = useQuery(productsPromiseId, +id);
+
 
     useEffect(() => {
         if (data) {
             setShow(true)
         }
     }, [loading])
-    
+
     const fadeAnimation = useSpring({
         opacity: show ? 1 : 0,
         config: {
             duration: 500,
         }
     });
+    
+    //contexto
+    const { addProduct} = useCartContext();
 
-
-    const { addProduct } = useCartContext();
-
-    const handleAdd = (() => {
-        addProduct()
-    })
+    const handleAdd = ((qty) => {
+        addProduct(data, qty);
+    });
 
     const [selectedColor, setSelectedColor] = useState();
     const [selectedSize, setSelectedSize] = useState();
@@ -120,7 +74,7 @@ export function Details() {
             <div className="pt-6">
                 <nav aria-label="Breadcrumb">
                     <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                        {product.breadcrumbs.map((breadcrumb) => (
+                        {breadcrumbs.map((breadcrumb) => (
                             <li key={breadcrumb.id}>
                                 <div className="flex items-center">
                                     <NavLink href={breadcrumb.href} to={breadcrumb.rute} className="mr-2 text-sm font-medium text-gray-900">
@@ -140,7 +94,7 @@ export function Details() {
                             </li>
                         ))}
                         <li className="text-sm">
-                            <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
+                            <a href={data.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
                                 {data.name}
                             </a>
                         </li>
@@ -148,7 +102,7 @@ export function Details() {
                 </nav>
 
                 {/* Image gallery */}
-                <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-1xl lg:grid-cols-1 lg:gap-x-8 lg:px-8">
+                <div className="mx-auto mt-6 max-w-xl sm:px-6 lg:grid lg:max-w-xl lg:grid-cols-1 lg:gap-x-8 lg:px-8">
                     <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
                         <img
                             src={data.imageSrc}
@@ -291,12 +245,12 @@ export function Details() {
                                 </RadioGroup>
                             </div>
 
-                            <button
-                                type="submit"
-                                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                            >
-                                Add to bag
-                            </button>
+
+                            <Counter stock={data.stock} onAdd={handleAdd}/>
+
+
+
+
                         </form>
                     </div>
 
@@ -306,7 +260,7 @@ export function Details() {
                             <h3 className="sr-only">Description</h3>
 
                             <div className="space-y-6">
-                                <p className="text-base text-gray-900">{product.description}</p>
+                                <p className="text-base text-gray-900">{data.description}</p>
                             </div>
                         </div>
 
@@ -315,7 +269,7 @@ export function Details() {
 
                             <div className="mt-4">
                                 <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                                    {product.highlights.map((highlight) => (
+                                    {data.highlights.map((highlight) => (
                                         <li key={highlight} className="text-gray-400">
                                             <span className="text-gray-600">{highlight}</span>
                                         </li>
@@ -328,7 +282,7 @@ export function Details() {
                             <h2 className="text-sm font-medium text-gray-900">Details</h2>
 
                             <div className="mt-4 space-y-6">
-                                <p className="text-sm text-gray-600">{product.details}</p>
+                                <p className="text-sm text-gray-600">{data.details}</p>
                             </div>
                         </div>
                     </div>

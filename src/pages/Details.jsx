@@ -21,17 +21,17 @@ const breadcrumbs = [
 const reviews = { href: '#', average: 4, totalCount: 117 }
 
 
-
-
-
 function classNames(...classes) {
 
     return classes.filter(Boolean).join(' ')
 }
 
+
+
 export function Details() {
 
     const { id } = useParams();
+
     const [show, setShow] = useState(false);
 
     const { data, loading } = useQuery(productsPromiseId, +id);
@@ -48,13 +48,6 @@ export function Details() {
         config: {
             duration: 500,
         }
-    });
-    
-    //contexto
-    const { addProduct } = useCartContext();
-
-    const handleAdd = ((qty) => {
-        addProduct(data, qty);
     });
 
     const [selectedColor, setSelectedColor] = useState();
@@ -246,7 +239,7 @@ export function Details() {
                             </div>
 
 
-                            <Counter stock={data.stock} handleAdd={handleAdd}/>
+                            <Counter data={data}/>
 
 
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useCartContext } from "../../state/cart.context";
 
-export const Counter = ({ stock, handleAdd }) => {
+export const Counter = ({ data }) => {
     const [count, setContador] = useState(1);
     const handleContador = (e, operacion) => {
         e.preventDefault();
@@ -8,6 +9,12 @@ export const Counter = ({ stock, handleAdd }) => {
         if (count === 1 && operacion === 'resta') return
         operacion === 'suma' ? setContador(count + 1) : setContador(count - 1);
     }
+
+        //contexto
+        const { addProduct } = useCartContext();
+        const handleAdd = ((qty) => {
+            addProduct(data, qty);
+        });
 
     return (
         <>

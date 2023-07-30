@@ -31,15 +31,15 @@ export const CartProvider = ({ children }) => {
         const newCart = cart.filter((product) => product.id !== id);
         setCart(newCart);
     }
-    
+
     //vaciar carrito
     const cleanCart = () => setCart([]);
 
     //consultar numero de productos
     const getCartQty = () => cart.reduce((acc, item) => acc + item.qty, 0);
-    
+
     //precio total
-    const getTotalPrice = () => cart.reduce((acc, item)=> acc + item.price * item.qty, 0);
+    const getTotalPrice = () => cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
 
 

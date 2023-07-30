@@ -9,7 +9,7 @@ import { formatter } from '../usesCase/formatter'
 import { useQuery } from '../hooks/useQuery'
 import { ScaleLoader } from 'react-spinners'
 import { useSpring, animated } from 'react-spring';
-import { useCartContext } from '../state/Cart.context'
+import { useCartContext } from '../state/Cart.context.jsx'
 import { Counter } from '../componentes/Counter/Counter'
 
 const breadcrumbs = [

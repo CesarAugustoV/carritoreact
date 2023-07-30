@@ -8,8 +8,8 @@ import { NavLink, useParams } from 'react-router-dom'
 import { formatter } from '../usesCase/formatter'
 import { useQuery } from '../hooks/useQuery'
 import { ScaleLoader } from 'react-spinners'
-import { useCartContext } from '../state/Cart.context.jsx'
 import { useSpring, animated } from 'react-spring';
+import { useCartContext } from '../state/Cart.context'
 import { Counter } from '../componentes/Counter/Counter'
 
 const breadcrumbs = [

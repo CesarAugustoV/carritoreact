@@ -12,6 +12,7 @@ export const Counter = ({ data }) => {
 
         //contexto
         const { addProduct } = useCartContext();
+        
         const handleAdd = ((qty) => {
             addProduct(data, qty);
         });

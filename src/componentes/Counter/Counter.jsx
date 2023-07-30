@@ -40,7 +40,7 @@ export const Counter = ({ stock, onAdd }) => {
                 onClick={
                     (e) => {
                         e.preventDefault()
-                       // onAdd(count)
+                        onAdd(count)
                     }
                 }
             >

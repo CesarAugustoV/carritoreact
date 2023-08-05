@@ -8,6 +8,7 @@ import './ItemListContainer.css';
 export function ItemListContainer({ id }) {
     
     const { data, loading } = useQuery(productsPromise, id);
+    console.log(data);
 
     
     if (loading) {

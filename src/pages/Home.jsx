@@ -3,6 +3,7 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import { ItemListContainer } from '../componentes'
+import { Carousel } from '../componentes/carousel/carousel'
 
 
 const sortOptions = [
@@ -69,6 +70,7 @@ export function Home() {
 
     return (
         <div className="bg-white">
+            <Carousel />
             <div>
                 {/* Mobile filter dialog */}
                 <Transition.Root show={mobileFiltersOpen} as={Fragment}>

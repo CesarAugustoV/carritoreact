@@ -1,4 +1,5 @@
 import { ShoppingBagIcon } from '@heroicons/react/24/outline'
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useCartContext } from '../../state/cart.context'
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
@@ -8,11 +9,9 @@ import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 export function CartWidget() {
     const [openCart, setOpenCart] = useState(false);
 
-    const handleOpenCart = ()=>{
-        setOpenCart(!openCart)
-    }
-
     const {getCartQty} = useCartContext();
+
+
     return (
         <div className="ml-4 flow-root lg:ml-6">
             <button href="#" className="group -m-2 flex items-center p-2" onClick={()=>setOpenCart(!openCart)}>

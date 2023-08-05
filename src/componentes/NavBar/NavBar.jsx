@@ -7,8 +7,8 @@ import { NavLink, Outlet } from 'react-router-dom'
 const navigation = {
     pages: [
         { name: 'Inicio', rute: '/' },
-        { name: 'Hombre', rute: '/category/men' },
-        { name: 'Mujer', rute: '/category/women' },
+        { name: 'Cervezas', rute: '/category/cerveza' },
+        { name: 'Licores', rute: '/category/licores' },
     ],
 }
 

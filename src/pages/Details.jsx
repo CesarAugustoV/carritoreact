@@ -11,13 +11,7 @@ import { ScaleLoader } from 'react-spinners'
 import { useSpring, animated } from 'react-spring';
 import { Counter } from '../componentes/Counter/Counter'
 
-const breadcrumbs = [
-    { id: 1, name: 'Inicio', href: '#', rute: '/' },
-    { id: 2, name: 'Hombre', href: '#', rute: '/category/men' },
-    { id: 3, name: 'Mujer', href: '#', rute: '/category/women' },
-];
 
-const reviews = { href: '#', average: 4, totalCount: 117 }
 
 
 function classNames(...classes) {
@@ -66,8 +60,8 @@ export function Details() {
             <div className="pt-6">
                 <nav aria-label="Breadcrumb">
                     <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                        {breadcrumbs.map((breadcrumb) => (
-                            <li key={breadcrumb.id}>
+                        {data.category.map((breadcrumb) => (
+                            <li key={breadcrumb.identificador}>
                                 <div className="flex items-center">
                                     <NavLink href={breadcrumb.href} to={breadcrumb.rute} className="mr-2 text-sm font-medium text-gray-900">
                                         {breadcrumb.name}
@@ -124,16 +118,16 @@ export function Details() {
                                         <StarIcon
                                             key={rating}
                                             className={classNames(
-                                                reviews.average > rating ? 'text-gray-900' : 'text-gray-200',
+                                                data.reviews.average > rating ? 'text-gray-900' : 'text-gray-200',
                                                 'h-5 w-5 flex-shrink-0'
                                             )}
                                             aria-hidden="true"
                                         />
                                     ))}
                                 </div>
-                                <p className="sr-only">{reviews.average} out of 5 stars</p>
-                                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                                    {reviews.totalCount} reviews
+                                <p className="sr-only">{data.reviews.average} out of 5 stars</p>
+                                <a href={data.reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                                    {data.reviews.totalCount} reviews
                                 </a>
                             </div>
                         </div>

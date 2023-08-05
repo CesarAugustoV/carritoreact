@@ -1,18 +1,33 @@
 const PRODUCTOS = [{
         id: 1,
-        name: 'Camiseta basica',
-        category: {
-            sex: 'men'
-        },
+        name: 'Ron Bacardi',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'licores',
+                href: '#',
+                rute: '/category/licores'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
+        imageSrc: 'https://s7d2.scene7.com/is/image/Tottus/01016047_1?wid=480&hei=480&qlt=70&fmt=webp',
+        imageAlt: "Ron Bacardi",
         price: 10,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Negro',
+        color: 'Carta Blanca',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -73,19 +88,34 @@ const PRODUCTOS = [{
     },
     {
         id: 2,
-        name: 'Camiseta estilo',
-        category: {
-            sex: 'men'
-        },
+        name: 'Ron Havana Club',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+        imageSrc: 'https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20145776-79e5JkvQ-medium.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 15,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Blanca',
+        color: '45° Gl',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -146,19 +176,34 @@ const PRODUCTOS = [{
     },
     {
         id: 3,
-        name: 'Camiseta gris',
-        category: {
-            sex: 'men'
-        },
+        name: 'Ron Havana Club',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg',
+        imageSrc: 'https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20096564-cL_iuR5W-medium.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 15,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Gris',
+        color: '40° Gl',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -219,19 +264,34 @@ const PRODUCTOS = [{
     },
     {
         id: 4,
-        name: 'Camiseta figura',
-        category: {
-            sex: 'women'
-        },
+        name: 'Cerveza Coors',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg',
+        imageSrc: 'https://s7d2.scene7.com/is/image/Tottus/20424524_1?wid=480&hei=480&qlt=70&fmt=webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 18,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Multicolor',
+        color: 'Six pack',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -292,19 +352,34 @@ const PRODUCTOS = [{
     },
     {
         id: 5,
-        name: 'Bolso de mano',
-        category: {
-            sex: 'women'
-        },
+        name: 'Cerveza Royal Guard',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+        imageSrc: 'https://r.btcdn.co/r/eyJzaG9wX2lkIjo0MDY0LCJnIjoiMTAwMHgifQ/f94f9d776de57d4/717410-7802100430038.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 30,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Azul',
+        color: 'Six pack',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -365,19 +440,34 @@ const PRODUCTOS = [{
     },
     {
         id: 6,
-        name: 'Cartera',
-        category: {
-            sex: 'women'
-        },
+        name: 'Cerveza Polar Pilsen',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg',
+        imageSrc: 'https://www.prolicor.com.ve/wp-content/uploads/2018/08/Polar_botella.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 35,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Gris',
+        color: 'Unidad',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -438,19 +528,34 @@ const PRODUCTOS = [{
     },
     {
         id: 7,
-        name: 'Bolso pequeño',
-        category: {
-            sex: 'women'
-        },
+        name: 'Cerveza Polar Pilsen',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
+        imageSrc: 'https://e18dcc0e54.cbaul-cdnwnd.com/86e7dbe3a88c91485ba8e8fb5a656aa9/200000004-a15bea15c0/Cerveza-Polar-Pilsen-222ml-Caja-Retornable-36-Unidades-500x500-4.jpg?ph=e18dcc0e54',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 28,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Salmon',
+        color: 'Caja',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -511,19 +616,34 @@ const PRODUCTOS = [{
     },
     {
         id: 8,
-        name: 'Catera estilo',
-        category: {
-            sex: 'women'
-        },
+        name: 'Cerveza Zulia',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-02.jpg',
+        imageSrc: 'https://dondelanegra.cl/wp-content/uploads/2020/06/27.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: 38,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Amarillo',
+        color: 'Unidad',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -584,20 +704,1002 @@ const PRODUCTOS = [{
     },
     {
         id: 9,
-        name: 'Camisetas basicas 6-pack',
-        category: {
-            sex: 'men',
-            oferta: true,
-        },
+        name: 'Cerveza Zulia',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-quick-preview-02-detail.jpg',
+        imageSrc: 'https://s.cornershopapp.com/product-images/3423444.jpg?versionId=VRDV2hEmwBFqT_Xzr88rDWjBhIw7s2Eb',
         imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
         price: 99,
         stock: 10,
         rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
         reviewCount: 117,
         href: '#',
-        color: 'Multicolor',
+        color: 'Caja',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 10,
+        name: 'Anis Cartujo',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://www.lacavadepedro.cl/wp-content/uploads/2021/06/aniscartujo.png',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Botella',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 11,
+        name: 'Ron Cacique',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://www.puntoasado.cl/wp-content/uploads/493901-1331076.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Botella',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 12,
+        name: 'Ron Cacique 500',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://cdnx.jumpseller.com/comercial-jp/image/23094644/resize/540/540?1657383979',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Botella',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 13,
+        name: 'Ron Carta Roja',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://caraotamarket.com/1659-large_default/ron-carta-roja-1l-santa-teresa.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Botella',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 14,
+        name: 'Whisky Buchanans 12 years',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://www.cityclub.com.mx/dw/image/v2/BGBD_PRD/on/demandware.static/-/Sites-soriana-grocery-master-catalog/default/dw08c8104b/images/product/50196388_A.jpg?sw=1000&sh=1000&sm=fit',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Botella',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 15,
+        name: 'Polar Negra',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://licomarazul.com/wp-content/uploads/2022/01/P0L4RN3GR4.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Unidad',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 16,
+        name: 'Polar Negra',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://licomarazul.com/wp-content/uploads/2022/01/P0L473RC1O-500x500.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Caja',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 17,
+        name: 'Cerveza Regional Light',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://licomarazul.com/wp-content/uploads/2022/02/C3RV3Z4R3G10N4L.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Unidad',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 18,
+        name: 'Cerveza Regional Light',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Cerveza',
+                href: '#',
+                rute: '/category/Cerveza'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://http2.mlstatic.com/D_NQ_NP_741893-MLV41783656016_052020-O.webp',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Caja',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 19,
+        name: 'Ron Santa Teresa',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://www.lakoka.cl/1550-large_default/ron-santa-teresa-gran-reserva-750ml.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Botella',
+        colors: [{
+                name: 'White',
+                class: 'bg-white',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Gray',
+                class: 'bg-gray-200',
+                selectedClass: 'ring-gray-400'
+            },
+            {
+                name: 'Black',
+                class: 'bg-gray-900',
+                selectedClass: 'ring-gray-900'
+            }
+        ],
+        sizes: [{
+                name: 'XXS',
+                inStock: true
+            },
+            {
+                name: 'XS',
+                inStock: true
+            },
+            {
+                name: 'S',
+                inStock: true
+            },
+            {
+                name: 'M',
+                inStock: true
+            },
+            {
+                name: 'L',
+                inStock: true
+            },
+            {
+                name: 'XL',
+                inStock: true
+            },
+            {
+                name: 'XXL',
+                inStock: true
+            },
+            {
+                name: 'XXXL',
+                inStock: false
+            },
+        ],
+        description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        highlights: [
+            'Hand cut and sewn locally',
+            'Dyed with our proprietary colors',
+            'Pre-washed & pre-shrunk',
+            'Ultra-soft 100% cotton',
+        ],
+        details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    },
+    {
+        id: 20,
+        name: 'Ron Cinco Estrellas',
+        category: [{
+                identificador: 1,
+                name: 'Inicio',
+                href: '#',
+                rute: '/'
+            },
+            {
+                identificador: 2,
+                name: 'Licores',
+                href: '#',
+                rute: '/category/Licores'
+            }
+        ],
+        href: '#',
+        imageSrc: 'https://triomcbo.com/wp-content/uploads/2022/01/C082-Ron-Cinco-Estrellas-1L.jpg',
+        imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
+        price: 99,
+        stock: 10,
+        rating: 3.9,
+        reviews: {
+            href: '#',
+            average: 4,
+            totalCount: 117
+        },
+        reviewCount: 117,
+        href: '#',
+        color: 'Botella',
         colors: [{
                 name: 'White',
                 class: 'bg-white',
@@ -660,8 +1762,9 @@ const PRODUCTOS = [{
 ]
 
 
+
 export const productsPromise = (id) => {
-    const _products = id ? PRODUCTOS.filter((product) => product.category.sex.toLowerCase() === id) : PRODUCTOS;
+    const _products = id ? PRODUCTOS.filter((product) => product.category[1].name.toLowerCase() === id) : PRODUCTOS;
 
     return new Promise((res) => {
         setTimeout(() => {

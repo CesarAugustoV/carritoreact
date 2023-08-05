@@ -3,24 +3,22 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { formatter } from '../../usesCase/formatter'
 import { useCartContext } from '../../state/cart.context';
+import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 export function ShoppingCart({ openCart, setOpenCart }) {
 
-    // const handleRemoveProduct = (event, id) => {
-    //     event.preventDefault();
-    //     const carritoNuevo = carrito.filter(p => p.id !== id)
-    //     if (carrito.length == 1) setOpenCart(!openCart)
-    //     setCarrito(carritoNuevo)
-    // }
-
     const { cart, getTotalPrice, removeProduct, cleanCart } = useCartContext();
 
-    if (cart.length === 0) {
-        setOpenCart(false)
-    }
-
-
+    useEffect(()=>{
+        const totalPrice = getTotalPrice(); 
+        if (totalPrice === 0) {
+            setOpenCart(false)
+            return;
+        }
+    },[openCart, removeProduct, cleanCart])
+    
 
     return (
         <Transition.Root show={openCart} as={Fragment}>
@@ -114,6 +112,7 @@ export function ShoppingCart({ openCart, setOpenCart }) {
                                                 href="#"
                                                 className="flex items-center mb-3 justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                                                 onClick={cleanCart}
+                                                disabled={cart.length === 0}
                                             >
                                                 Vaciar
                                             </button>
@@ -125,12 +124,13 @@ export function ShoppingCart({ openCart, setOpenCart }) {
                                             </div>
                                             <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                                             <div className="mt-6">
-                                                <a
+                                                <NavLink
                                                     href="#"
                                                     className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                                                    to="/cart"
                                                 >
                                                     Checkout
-                                                </a>
+                                                </NavLink>
                                             </div>
                                             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                                 <p>

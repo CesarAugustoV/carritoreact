@@ -6,6 +6,7 @@ import { ItemListContainer } from '../componentes'
 import { Carousel } from '../componentes/carousel/carousel'
 import { useQuery } from '../hooks/useQuery'
 import { filtrosPromise } from '../lib/products.request'
+import { Whatsapp } from '../componentes/WhatsApp/WhatsApp'
 
 
 function classNames(...classes) {
@@ -22,6 +23,7 @@ export function Home() {
     return (
         <div className="bg-white">
             <Carousel />
+            <Whatsapp />
             <div>
                 {/* Mobile filter dialog */}
                 <Transition.Root show={mobileFiltersOpen} as={Fragment}>

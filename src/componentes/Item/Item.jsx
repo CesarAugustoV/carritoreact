@@ -26,7 +26,7 @@ export function Item({id,  imageSrc ,imageAlt ,href ,name ,color ,price}) {
 
     return (
         
-        <animated.div style={fadeAnimation} className="group relative z-0" onClick={()=> navigate(`/item/${id}`)}>
+        <animated.div style={fadeAnimation} className="mt-3 group relative z-0" onClick={()=> navigate(`/item/${id}`)}>
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 <img
                     src={imageSrc}

@@ -6,6 +6,7 @@ import { ItemListContainer } from '../componentes'
 import { useParams } from 'react-router-dom'
 import { useQuery } from '../hooks/useQuery'
 import { filtrosPromise } from '../lib/products.request'
+import { Whatsapp } from '../componentes/WhatsApp/WhatsApp'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -23,6 +24,7 @@ export function Category() {
 
     return (
         <div className="bg-white">
+            <Whatsapp />
             <div>
                 {/* Mobile filter dialog */}
                 <Transition.Root show={mobileFiltersOpen} as={Fragment}>

@@ -14,7 +14,7 @@ export function Whatsapp() {
                 allowEsc
                 allowClickAway
                 notification
-                notificationSound
+                notificationSound={true}
                 chatMessage='Hola, ¿Como estás? ¿En que puedo ayudarte?'
                 placeholder="Escribe tu mensaje..."
                 statusMessage="Respuesta tipica, 5 minutos."

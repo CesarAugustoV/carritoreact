@@ -1761,6 +1761,152 @@ const PRODUCTOS = [{
     // More products...
 ]
 
+const FILTROS = [{
+    sortOptions: [{
+            name: 'Popular',
+            href: '#',
+            current: true
+        },
+        {
+            name: 'Mejor valuado',
+            href: '#',
+            current: false
+        },
+        {
+            name: 'Nuevo',
+            href: '#',
+            current: false
+        },
+        {
+            name: 'Precio: menor a mayor',
+            href: '#',
+            current: false
+        },
+        {
+            name: 'Precio: mayor a menor',
+            href: '#',
+            current: false
+        },
+    ],
+    filters: [{
+            id: 'marca',
+            name: 'Marca',
+            options: [{
+                    value: 'blanco',
+                    label: 'Blanco',
+                    checked: false
+                },
+                {
+                    value: 'beige',
+                    label: 'Beige',
+                    checked: false
+                },
+                {
+                    value: 'azul',
+                    label: 'Azul',
+                    checked: true
+                },
+                {
+                    value: 'marron',
+                    label: 'Marron',
+                    checked: false
+                },
+                {
+                    value: 'verde',
+                    label: 'Verde',
+                    checked: false
+                },
+                {
+                    value: 'purpura',
+                    label: 'Purpura',
+                    checked: false
+                },
+            ],
+        },
+        {
+            id: 'categoria',
+            name: 'Categoria',
+            options: [{
+                    value: 'nuevo',
+                    label: 'Nuevos productos',
+                    checked: false
+                },
+                {
+                    value: 'sale',
+                    label: 'Sale',
+                    checked: false
+                },
+                {
+                    value: 'bolsos',
+                    label: 'Bolsos',
+                    checked: true
+                },
+                {
+                    value: 'cateras',
+                    label: 'Carteras',
+                    checked: false
+                },
+                {
+                    value: 'accessories',
+                    label: 'Accessories',
+                    checked: false
+                },
+            ],
+        },
+        {
+            id: 'tamaño',
+            name: 'Tamaño',
+            options: [{
+                    value: '2l',
+                    label: '2L',
+                    checked: false
+                },
+                {
+                    value: '6l',
+                    label: '6L',
+                    checked: false
+                },
+                {
+                    value: '12l',
+                    label: '12L',
+                    checked: false
+                },
+                {
+                    value: '18l',
+                    label: '18L',
+                    checked: false
+                },
+                {
+                    value: '20l',
+                    label: '20L',
+                    checked: false
+                },
+                {
+                    value: '40l',
+                    label: '40L',
+                    checked: true
+                },
+            ],
+        }
+    ],
+    subCategories: [{
+            name: 'Ron',
+            href: '#'
+        },
+        {
+            name: 'Whisky',
+            href: '#'
+        },
+        {
+            name: 'Anis',
+            href: '#'
+        },
+        {
+            name: 'Cervezas',
+            href: '#'
+        },
+    ]
+}];
 
 
 export const productsPromise = (id) => {
@@ -1782,3 +1928,11 @@ export const productsPromiseId = (id) => {
         }, 1000);
     })
 };
+
+export const filtrosPromise = () => {
+    return new Promise ((res)=>{
+        setTimeout(() => {
+            res(FILTROS)
+        }, 800);
+    })
+}

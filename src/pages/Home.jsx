@@ -15,8 +15,8 @@ const sortOptions = [
 ]
 const filters = [
     {
-        id: 'color',
-        name: 'Color',
+        id: 'marca',
+        name: 'Marca',
         options: [
             { value: 'blanco', label: 'Blanco', checked: false },
             { value: 'beige', label: 'Beige', checked: false },
@@ -52,11 +52,10 @@ const filters = [
 ]
 
 const subCategories = [
-    { name: 'Camiseta', href: '#' },
-    { name: 'Bolsos', href: '#' },
-    { name: 'Zapatos', href: '#' },
-    { name: 'Fundas portatiles', href: '#' },
-    { name: 'Accesorios', href: '#' },
+    { name: 'Ron', href: '#' },
+    { name: 'Whisky', href: '#' },
+    { name: 'Anis', href: '#' },
+    { name: 'Cervezas', href: '#' },
 ]
 
 function classNames(...classes) {

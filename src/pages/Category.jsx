@@ -1,10 +1,8 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import { productsPromise } from '../lib/products.request'
 import { ItemListContainer } from '../componentes'
-import { Suspense } from 'react'
 import { useParams } from 'react-router-dom'
 
 const sortOptions = [
@@ -16,8 +14,8 @@ const sortOptions = [
 ]
 const filters = [
     {
-        id: 'color',
-        name: 'Color',
+        id: 'marca',
+        name: 'Marca',
         options: [
             { value: 'blanco', label: 'Blanco', checked: false },
             { value: 'beige', label: 'Beige', checked: false },
@@ -53,11 +51,10 @@ const filters = [
 ]
 
 const subCategories = [
-    { name: 'Camiseta', href: '#' },
-    { name: 'Bolsos', href: '#' },
-    { name: 'Zapatos', href: '#' },
-    { name: 'Fundas portatiles', href: '#' },
-    { name: 'Accesorios', href: '#' },
+    { name: 'Ron', href: '#' },
+    { name: 'Whisky', href: '#' },
+    { name: 'Anis', href: '#' },
+    { name: 'Cervezas', href: '#' },
 ]
 
 function classNames(...classes) {
@@ -174,7 +171,7 @@ export function Category() {
 
                 <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-10">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">Nueva temporada</h1>
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">Licores y Cervezas</h1>
 
                         <div className="flex items-center">
                             <Menu as="div" className="relative inline-block text-left">

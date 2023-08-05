@@ -7,6 +7,7 @@ import { Carousel } from '../componentes/carousel/carousel'
 import { useQuery } from '../hooks/useQuery'
 import { filtrosPromise } from '../lib/products.request'
 import { Whatsapp } from '../componentes/WhatsApp/WhatsApp'
+import { Footer } from '../componentes/Footer/Footer'
 
 
 function classNames(...classes) {
@@ -257,6 +258,7 @@ export function Home() {
                         </div>
                     </section>
                 </main>
+                <Footer />
             </div>
         </div>
     )

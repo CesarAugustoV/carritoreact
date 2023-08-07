@@ -19,7 +19,7 @@ export function CartWidget() {
                     className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                     aria-hidden="true"
                 />
-                <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{getCartQty()}</span>
+                <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{getCartQty() === 0 ? null : getCartQty()}</span>
                 <span className="sr-only">items in cart, view bag</span>
                 <ShoppingCart openCart={openCart} setOpenCart={setOpenCart}/>
             </button>

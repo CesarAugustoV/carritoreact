@@ -10,6 +10,7 @@ import { useQuery } from '../hooks/useQuery'
 import { ScaleLoader } from 'react-spinners'
 import { useSpring, animated } from 'react-spring';
 import { Counter } from '../componentes/Counter/Counter'
+import { Footer } from '../componentes/Footer/Footer'
 
 
 
@@ -43,17 +44,11 @@ export function Details() {
         }
     });
 
-    const [selectedColor, setSelectedColor] = useState();
-    const [selectedSize, setSelectedSize] = useState();
-
-    if (loading) {
+    if (!data) {
         return <div style={{ position: 'fixed', top: "0", left: "0", width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", }}><ScaleLoader color="#36d7b7" size={100} cssOverride={{ height: "30px", width: "30px" }} /></div>
     }
 
-    if (!data) {
-        return
-    }
-
+    console.log(data.category);
 
     return (
         <animated.div style={fadeAnimation} className="bg-white">
@@ -63,7 +58,7 @@ export function Details() {
                         {data.category.map((breadcrumb) => (
                             <li key={breadcrumb.identificador}>
                                 <div className="flex items-center">
-                                    <NavLink href={breadcrumb.href} to={breadcrumb.rute} className="mr-2 text-sm font-medium text-gray-900">
+                                    <NavLink href={breadcrumb.href} to={breadcrumb.rute.toLowerCase()} className="mr-2 text-sm font-medium text-gray-900">
                                         {breadcrumb.name}
                                     </NavLink>
                                     <svg
@@ -168,6 +163,7 @@ export function Details() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </animated.div>
     )
 }

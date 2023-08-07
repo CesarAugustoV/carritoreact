@@ -273,9 +273,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -361,9 +361,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -449,9 +449,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -537,9 +537,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/cervezas'
             }
         ],
         href: '#',
@@ -625,9 +625,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -713,9 +713,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -1241,9 +1241,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -1329,9 +1329,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -1417,9 +1417,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',
@@ -1505,9 +1505,9 @@ const PRODUCTOS = [{
             },
             {
                 identificador: 2,
-                name: 'Cerveza',
+                name: 'Cervezas',
                 href: '#',
-                rute: '/category/Cerveza'
+                rute: '/category/Cervezas'
             }
         ],
         href: '#',

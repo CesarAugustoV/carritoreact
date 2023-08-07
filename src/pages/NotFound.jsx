@@ -21,6 +21,7 @@ export function NotFound() {
                         </NavLink>
                     </div>
                 </div>
+                <Footer />
             </main>
     )
 }

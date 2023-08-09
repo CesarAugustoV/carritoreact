@@ -6,7 +6,7 @@ import { useSpring, animated} from 'react-spring';
 
 
 
-export function Item({id,  imageSrc ,imageAlt ,href ,name ,color ,price}) {
+export function Item({id,  imageSrc ,imageAlt ,href ,name ,subtitulo ,price}) {
 
     const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ export function Item({id,  imageSrc ,imageAlt ,href ,name ,color ,price}) {
                             {name}
                         </button>
                     </h3>
-                    <p className="mt-1 text-sm text-gray-500">{color}</p>
+                    <p className="mt-1 text-sm text-gray-500">{subtitulo}</p>
                 </div>
                 <p className="text-sm font-medium text-gray-900">{price ? formatter.format(price): null}</p>
             </div>

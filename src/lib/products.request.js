@@ -27,56 +27,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Carta Blanca',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Carta Blanca',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -115,56 +66,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: '45° Gl',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: '45° Gl',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -203,56 +105,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: '40° Gl',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: '40° Gl',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -291,56 +144,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Six pack',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Six pack',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -379,56 +183,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Six pack',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Six pack',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -467,56 +222,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Unidad',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Unidad',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -555,56 +261,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Caja',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Caja',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -643,56 +300,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Unidad',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Unidad',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -731,56 +339,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Caja',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Caja',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -819,56 +378,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Botella',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Botella',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -907,56 +417,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Botella',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Botella',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -995,56 +456,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Botella',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Botella',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1083,56 +495,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Botella',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Botella',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1171,56 +534,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Botella',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Botella',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1259,56 +573,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Unidad',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Unidad',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1347,56 +612,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Caja',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Caja',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1435,56 +651,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Unidad',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Unidad',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1523,56 +690,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Caja',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Caja',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1611,56 +729,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Botella',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Botella',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1699,56 +768,7 @@ const PRODUCTOS = [{
         },
         reviewCount: 117,
         href: '#',
-        color: 'Botella',
-        colors: [{
-                name: 'White',
-                class: 'bg-white',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Gray',
-                class: 'bg-gray-200',
-                selectedClass: 'ring-gray-400'
-            },
-            {
-                name: 'Black',
-                class: 'bg-gray-900',
-                selectedClass: 'ring-gray-900'
-            }
-        ],
-        sizes: [{
-                name: 'XXS',
-                inStock: true
-            },
-            {
-                name: 'XS',
-                inStock: true
-            },
-            {
-                name: 'S',
-                inStock: true
-            },
-            {
-                name: 'M',
-                inStock: true
-            },
-            {
-                name: 'L',
-                inStock: true
-            },
-            {
-                name: 'XL',
-                inStock: true
-            },
-            {
-                name: 'XXL',
-                inStock: true
-            },
-            {
-                name: 'XXXL',
-                inStock: false
-            },
-        ],
+        subtitulo: 'Botella',
         description: 'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
         highlights: [
             'Hand cut and sewn locally',
@@ -1909,14 +929,43 @@ const FILTROS = [{
 }];
 
 
-export const productsPromise = (id) => {
-    const _products = id ? PRODUCTOS.filter((product) => product.category[1].name.toLowerCase() === id) : PRODUCTOS;
+import {
+    collection,
+    getDocs,
+    query,
+    where
+} from 'firebase/firestore';
+import {
+    db
+} from "./config";
 
-    return new Promise((res) => {
-        setTimeout(() => {
-            res(_products)
-        }, 1000);
+const productosRef = collection(db, "Items");
+
+
+
+// export const productsPromise = (id) => {
+//     const _products = id ? PRODUCTOS.filter((product) => product.category[1].name.toLowerCase() === id) : PRODUCTOS;
+//     console.log(_products);
+//     return new Promise((res) => {
+//         setTimeout(() => {
+//             res(_products)
+//         }, 1000);
+//     })
+// };
+
+export const productsPromise = async(category) => {
+
+    const q = category 
+    ? query(productosRef, where('category', '==', category))
+    : productosRef;
+
+
+    let productos = [];
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+        productos=[...productos, {...doc.data(), id: doc.id }]
     })
+    return productos;
 };
 
 export const productsPromiseId = (id) => {
@@ -1930,7 +979,7 @@ export const productsPromiseId = (id) => {
 };
 
 export const filtrosPromise = () => {
-    return new Promise ((res)=>{
+    return new Promise((res) => {
         setTimeout(() => {
             res(FILTROS)
         }, 800);

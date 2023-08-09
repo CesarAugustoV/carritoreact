@@ -18,6 +18,7 @@ function classNames(...classes) {
 export function Category() {
 
     const { id } = useParams();
+    
     //data de los filtros
     const { data, loading } = useQuery(filtrosPromise);
 

@@ -1,8 +1,10 @@
+import { useCallback } from "react";
 import { useState } from "react";
 import { useCartContext } from "../../state/cart.context";
 
 export const Counter = ({ data }) => {
     const [count, setContador] = useState(1);
+
     const handleContador = (e, operacion) => {
         e.preventDefault();
 
@@ -13,9 +15,10 @@ export const Counter = ({ data }) => {
         //contexto
         const { addProduct } = useCartContext();
 
-        const handleAdd = ((qty) => {
-            addProduct(data, qty);
-        });
+        const handleAdd = useCallback(
+            (qty) => {
+            addProduct(data, qty)
+        }, [addProduct, data]);
 
     return (
         <>

@@ -7,7 +7,6 @@ export const useQuery = (cb, id = null) => {
     const [data, setData] = useState();
     const [loading, setLoading] = useState();
     const [error, setError] = useState();
-
     const fetchData = async () => {
         setLoading(true);
         try {

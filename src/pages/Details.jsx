@@ -48,8 +48,6 @@ export function Details() {
         return <div style={{ position: 'fixed', top: "0", left: "0", width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", }}><ScaleLoader color="#36d7b7" size={100} cssOverride={{ height: "30px", width: "30px" }} /></div>
     }
 
-    console.log(data.category);
-
     return (
         <animated.div style={fadeAnimation} className="bg-white">
             <div className="pt-6">

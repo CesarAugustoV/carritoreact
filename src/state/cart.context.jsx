@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMemo } from "react";
 import { useContext } from "react";
 import { createContext } from "react";
 
@@ -36,10 +37,11 @@ export const CartProvider = ({ children }) => {
     const cleanCart = () => setCart([]);
 
     //consultar numero de productos
-    const getCartQty = () => cart.reduce((acc, item) => acc + item.qty, 0);
+    //useMemo cambia la funcion por un valor. funciona como un useEffect
+    const getCartQty = useMemo(() => cart.reduce((acc, item) => acc + item.qty, 0),[cart]);
 
     //precio total
-    const getTotalPrice = () => cart.reduce((acc, item) => acc + item.price * item.qty, 0);
+    const getTotalPrice = useMemo(() => cart.reduce((acc, item) => acc + item.price * item.qty, 0),[cart]);
 
 
 

@@ -10,12 +10,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBfGxcM6fXKq23KrdL_C7nhFItItWCF1AY",
-    authDomain: "botilleria-9ac6f.firebaseapp.com",
-    projectId: "botilleria-9ac6f",
-    storageBucket: "botilleria-9ac6f.appspot.com",
-    messagingSenderId: "93878941281",
-    appId: "1:93878941281:web:efdd6f285aef57217c9c20"
+    apiKey: import.meta.env.VITE_FBS_API_KEY,
+    authDomain: import.meta.env.VITE_FBS_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FBS_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FBS_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FBS_SENDER_ID,
+    appId: import.meta.env.VITE_FBS_APP_ID
 };
 
 // Initialize Firebase

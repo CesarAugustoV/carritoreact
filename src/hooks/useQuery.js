@@ -7,6 +7,7 @@ export const useQuery = (cb, id = null) => {
     const [data, setData] = useState();
     const [loading, setLoading] = useState();
     const [error, setError] = useState();
+
     const fetchData = async () => {
         setLoading(true);
         try {
@@ -18,10 +19,11 @@ export const useQuery = (cb, id = null) => {
             setLoading(false);
         }
     };
-
+    
     useEffect(() => {
         fetchData();
     }, [id, cb]);
+
 
     return {
         data,

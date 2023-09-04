@@ -4,7 +4,7 @@ import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
 import { useEffect } from 'react'
 import { productsPromiseId } from '../lib/products.request'
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import { formatter } from '../usesCase/formatter'
 import { useQuery } from '../hooks/useQuery'
 import { ScaleLoader } from 'react-spinners'
@@ -24,12 +24,17 @@ function classNames(...classes) {
 
 export function Details() {
 
+    const navigate = useNavigate();
+
     const { id } = useParams();
 
     const [show, setShow] = useState(false);
 
-    const { data, loading } = useQuery(productsPromiseId, +id);
+    const { data, loading } = useQuery(productsPromiseId, id);
 
+    if (data === null) {
+        navigate('notfound')
+    }
 
     useEffect(() => {
         if (data) {
@@ -53,7 +58,7 @@ export function Details() {
             <div className="pt-6">
                 <nav aria-label="Breadcrumb">
                     <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                        {data.category.map((breadcrumb) => (
+                        {data.pagination.map((breadcrumb) => (
                             <li key={breadcrumb.identificador}>
                                 <div className="flex items-center">
                                     <NavLink href={breadcrumb.href} to={breadcrumb.rute.toLowerCase()} className="mr-2 text-sm font-medium text-gray-900">
@@ -124,8 +129,10 @@ export function Details() {
                                 </a>
                             </div>
                             <div className="mt-5 space-y-6">
-                            <h2 className="text-sm font-medium text-gray-900">Details</h2>
-                                <p className="mt-5 text-sm text-gray-600">{data.details}</p>
+                                <div>
+                                    <h3 className="text-sm font-medium text-gray-900">Stock</h3>
+                                    <span className="text-base text-gray-900">{data.stock}</span>
+                                </div>
                             </div>
                         </div>
 
@@ -146,6 +153,7 @@ export function Details() {
                         </div>
 
                         <div className="mt-10">
+
                             <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
 
                             <div className="mt-4">

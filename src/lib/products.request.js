@@ -1,7 +1,7 @@
 const PRODUCTOS = [{
-        id: 1,
         name: 'Ron Bacardi',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -38,9 +38,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 2,
         name: 'Ron Havana Club',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -77,9 +77,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 3,
         name: 'Ron Havana Club',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -116,9 +116,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 4,
         name: 'Cerveza Coors',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -155,9 +155,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 5,
         name: 'Cerveza Royal Guard',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -194,9 +194,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 6,
         name: 'Cerveza Polar Pilsen',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -233,9 +233,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 7,
         name: 'Cerveza Polar Pilsen',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -272,9 +272,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 8,
         name: 'Cerveza Zulia',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -311,9 +311,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 9,
         name: 'Cerveza Zulia',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -350,9 +350,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 10,
         name: 'Anis Cartujo',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -389,9 +389,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 11,
         name: 'Ron Cacique',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -428,9 +428,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 12,
         name: 'Ron Cacique 500',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -467,9 +467,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 13,
         name: 'Ron Carta Roja',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -506,9 +506,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 14,
         name: 'Whisky Buchanans 12 years',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -522,7 +522,7 @@ const PRODUCTOS = [{
             }
         ],
         href: '#',
-        imageSrc: 'https://www.cityclub.com.mx/dw/image/v2/BGBD_PRD/on/demandware.static/-/Sites-soriana-grocery-master-catalog/default/dw08c8104b/images/product/50196388_A.jpg?sw=1000&sh=1000&sm=fit',
+        imageSrc: 'https://laguarda.com.ec/wp-content/uploads/2017/12/buchanans.jpg',
         imageAlt: 'Two each of gray, white, and black shirts arranged on table.',
         price: 99,
         stock: 10,
@@ -545,9 +545,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 15,
         name: 'Polar Negra',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -584,9 +584,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 16,
         name: 'Polar Negra',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -623,9 +623,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 17,
         name: 'Cerveza Regional Light',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -662,9 +662,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 18,
         name: 'Cerveza Regional Light',
-        category: [{
+        category: 'cervezas',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -701,9 +701,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 19,
         name: 'Ron Santa Teresa',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -740,9 +740,9 @@ const PRODUCTOS = [{
         details: 'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
     },
     {
-        id: 20,
         name: 'Ron Cinco Estrellas',
-        category: [{
+        category: 'licores',
+        pagination: [{
                 identificador: 1,
                 name: 'Inicio',
                 href: '#',
@@ -872,41 +872,6 @@ const FILTROS = [{
                     checked: false
                 },
             ],
-        },
-        {
-            id: 'tamaño',
-            name: 'Tamaño',
-            options: [{
-                    value: '2l',
-                    label: '2L',
-                    checked: false
-                },
-                {
-                    value: '6l',
-                    label: '6L',
-                    checked: false
-                },
-                {
-                    value: '12l',
-                    label: '12L',
-                    checked: false
-                },
-                {
-                    value: '18l',
-                    label: '18L',
-                    checked: false
-                },
-                {
-                    value: '20l',
-                    label: '20L',
-                    checked: false
-                },
-                {
-                    value: '40l',
-                    label: '40L',
-                    checked: true
-                },
-            ],
         }
     ],
     subCategories: [{
@@ -930,10 +895,20 @@ const FILTROS = [{
 
 
 import {
+    async
+} from '@firebase/util';
+import {
     collection,
+    addDoc,
     getDocs,
+    getDoc,
+    doc,
     query,
-    where
+    where,
+    updateDoc,
+    deleteDoc,
+    increment,
+    writeBatch
 } from 'firebase/firestore';
 import {
     db
@@ -943,40 +918,50 @@ const productosRef = collection(db, "Items");
 
 
 
-// export const productsPromise = (id) => {
-//     const _products = id ? PRODUCTOS.filter((product) => product.category[1].name.toLowerCase() === id) : PRODUCTOS;
-//     console.log(_products);
-//     return new Promise((res) => {
-//         setTimeout(() => {
-//             res(_products)
-//         }, 1000);
-//     })
-// };
 
-export const productsPromise = async(category) => {
+export const productsPromise = async (category) => {
 
-    const q = category 
-    ? query(productosRef, where('category', '==', category))
-    : productosRef;
+    const q = category ?
+        query(productosRef, where('category', '==', category)) :
+        productosRef;
 
 
     let productos = [];
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-        productos=[...productos, {...doc.data(), id: doc.id }]
+        productos = [...productos, {
+            ...doc.data(),
+            id: doc.id
+        }]
     })
     return productos;
 };
 
-export const productsPromiseId = (id) => {
-    const producto = PRODUCTOS.filter((product) => product.id === id)[0];
+export const productsPromiseId = async (id) => {
 
-    return new Promise((res) => {
-        setTimeout(() => {
-            res(producto)
-        }, 1000);
-    })
+    const document = doc(db, "Items", id);
+
+    const docSnap = await getDoc(document);
+
+
+    if (docSnap.exists()) return {
+        id: docSnap.id,
+        ...docSnap.data()
+    };
+
+    return null;
+
 };
+
+//cargar data de PRODUCTOS a la bd
+export const cargarData = async () => {
+    PRODUCTOS.forEach(async (producto) => {
+        await addDoc(productosRef, producto)
+    })
+}
+
+
+
 
 export const filtrosPromise = () => {
     return new Promise((res) => {
@@ -984,4 +969,35 @@ export const filtrosPromise = () => {
             res(FILTROS)
         }, 800);
     })
+}
+
+
+// actualizar bd
+export const updateProducto = async (id, item) => {
+    const newBook = await updateDoc(doc(db, "items", id), item);
+    return;
+}
+
+// eliminar db
+export const deleteBook = async (id) => {
+    return await deleteDoc(doc(db, "items", id))
+}
+
+// operaciones en lote
+export const updateManyProductos = async (items) => {
+    const batch = writeBatch(db);
+
+    items.forEach(({
+        id,
+        qty
+    }) => {
+
+        
+
+        batch.update(doc(db, "Items", id), {
+            stock: increment(-qty)
+        })
+    })
+
+    batch.commit();
 }

@@ -6,7 +6,7 @@ import { useSpring, animated} from 'react-spring';
 
 
 
-export function Item({id,  imageSrc ,imageAlt ,href ,name ,subtitulo ,price}) {
+export function Item({id,  imageSrc, imageAlt, href, name, subtitulo, price}) {
 
     const navigate = useNavigate();
 

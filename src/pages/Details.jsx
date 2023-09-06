@@ -1,7 +1,6 @@
 
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
-import { RadioGroup } from '@headlessui/react'
 import { useEffect } from 'react'
 import { productsPromiseId } from '../lib/products.request'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
@@ -128,15 +127,9 @@ export function Details() {
                                     {data.reviews.totalCount} reviews
                                 </a>
                             </div>
-                            <div className="mt-5 space-y-6">
-                                <div>
-                                    <h3 className="text-sm font-medium text-gray-900">Stock</h3>
-                                    <span className="text-base text-gray-900">{data.stock}</span>
-                                </div>
-                            </div>
                         </div>
 
-                        <Counter data={data} />
+                        <Counter data={data} id={id}/>
 
 
 

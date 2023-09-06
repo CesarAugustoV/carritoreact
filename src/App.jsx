@@ -10,6 +10,7 @@ import { NotFound } from './pages/NotFound';
 import { CartProvider } from './state/cart.context';
 import { ThemeProvider } from './state/Theme.context';
 import { Cart } from './pages/Cart';
+import { Invoice } from './pages/Invoice';
 
 
 
@@ -20,6 +21,7 @@ const routes = createBrowserRouter(createRoutesFromElements(
         <Route path="/item/:id" element={<Details />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/cart" element={<Cart />}/>
+        <Route path="/Invoice/:id" element={<Invoice />}/>
         <Route path="*" element={<NotFound />} />
     </Route>
 ));

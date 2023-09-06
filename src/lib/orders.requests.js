@@ -1,9 +1,8 @@
 import {
-    async
-} from '@firebase/util';
-import {
+    collection,
     addDoc,
-    collection
+    getDoc,
+    doc
 } from 'firebase/firestore';
 import {
     db
@@ -17,3 +16,19 @@ export const addOrder = async (order) => {
 
     return orderDoc.id;
 }
+
+export const getOrder = async (id) => {
+
+    const document = doc(db, "orders", id);
+
+    const docSnap = await getDoc(document);
+
+    if (docSnap.exists()) return {
+        id: docSnap.id,
+        ...docSnap.data()
+    };
+
+    return null;
+
+}
+

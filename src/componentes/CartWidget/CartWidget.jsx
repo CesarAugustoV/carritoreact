@@ -1,5 +1,4 @@
 import { ShoppingBagIcon } from '@heroicons/react/24/outline'
-import { useEffect } from 'react';
 import { useState } from 'react';
 import { useCartContext } from '../../state/cart.context'
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';

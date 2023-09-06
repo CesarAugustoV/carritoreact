@@ -5,7 +5,7 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from
 import { ItemListContainer } from '../componentes'
 import { useParams } from 'react-router-dom'
 import { useQuery } from '../hooks/useQuery'
-import { filtrosPromise } from '../lib/products.request'
+import { filtrosPromesa } from '../lib/products.request'
 import { Whatsapp } from '../componentes/WhatsApp/WhatsApp'
 import { Footer } from '../componentes/Footer/Footer'
 import { useSpring, animated } from 'react-spring';
@@ -20,7 +20,7 @@ export function Category() {
     const { id } = useParams();
     
     //data de los filtros
-    const { data, loading } = useQuery(filtrosPromise);
+    const { data, loading } = useQuery(filtrosPromesa);
 
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 

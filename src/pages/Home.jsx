@@ -5,6 +5,7 @@ import { Category } from './Category'
 
 export function Home() {
 
+
     return (
         <div className="bg-white">
             <Carousel />

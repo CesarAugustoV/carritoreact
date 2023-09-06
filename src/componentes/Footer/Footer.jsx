@@ -77,7 +77,7 @@ export function Footer() {
 
             {/* <!-- Main container div: holds the entire content of the footer, including four sections (Tailwind Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
             <div className="mx-6 py-10 text-center md:text-left">
-                <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
                     {/* <!-- Tailwind Elements section --> */}
                     <div className="">
                         <h6
@@ -93,63 +93,7 @@ export function Footer() {
                             House Bar
                         </h6>
                         <p>
-                            Here you can use rows and columns to organize your footer
-                            content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                        </p>
-                    </div>
-                    {/* <!-- Products section --> */}
-                    <div className="">
-                        <h6
-                            className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                            Products
-                        </h6>
-                        <p className="mb-4">
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >Angular</a
-                            >
-                        </p>
-                        <p className="mb-4">
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >React</a
-                            >
-                        </p>
-                        <p className="mb-4">
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >Vue</a
-                            >
-                        </p>
-                        <p>
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >Laravel</a
-                            >
-                        </p>
-                    </div>
-                    {/* <!-- Useful links section --> */}
-                    <div className="">
-                        <h6
-                            className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                            Useful links
-                        </h6>
-                        <p className="mb-4">
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >Pricing</a
-                            >
-                        </p>
-                        <p className="mb-4">
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >Settings</a
-                            >
-                        </p>
-                        <p className="mb-4">
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >Orders</a
-                            >
-                        </p>
-                        <p>
-                            <a href="#!" className="text-neutral-600 dark:text-neutral-200"
-                            >Help</a
-                            >
+                            Productos de calidad
                         </p>
                     </div>
                     {/* <!-- Contact section --> */}

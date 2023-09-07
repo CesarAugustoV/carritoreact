@@ -19,8 +19,6 @@ export const Counter = ({ data, id }) => {
             }
         }, [cart])
 
-        console.log(stock);
-
     const handleContador = (e, operacion) => {
         e.preventDefault();
 
@@ -52,8 +50,7 @@ export const Counter = ({ data, id }) => {
         <>
             <div className="mt-5 space-y-6">
                 <div>
-                    <h3 className="text-sm font-medium text-gray-900">Stock</h3>
-                    <span className="text-base text-gray-900">{stock}</span>
+                    <span className="text-sm font-medium text-gray-900">{stock===0 ? 'No hay productos en stock' : 'Stock: ' + stock }</span>
                 </div>
             </div>
 
